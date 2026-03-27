@@ -1,0 +1,4230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Anestésica Veterinária</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="description" content="Sistema completo de monitoramento anestésico veterinário">
+    <meta name="theme-color" content="#3498db">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Ficha Anestésica">
+    
+    <!-- Ícone inline base64 -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMzQ5OGRiIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMjk4MGI5Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjE5MiIgaGVpZ2h0PSIxOTIiIGZpbGw9InVybCgjYmcpIi8+PHBhdGggZD0iTSAxOS4yIDk2IEwgNDggOTYgTCA2Ny4yIDY0IEwgODYuNCAxMjggTCAxMDUuNiA4MCBMIDEyNC44IDk2IEwgMTcyLjggOTYiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iOS42IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGZpbGw9Im5vbmUiLz48cmVjdCB4PSIxMzgiIHk9IjM2IiB3aWR0aD0iMTIiIGhlaWdodD0iMjQiIGZpbGw9IndoaXRlIi8+PHJlY3QgeD0iMTMyIiB5PSI0MiIgd2lkdGg9IjI0IiBoZWlnaHQ9IjEyIiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==">
+    <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMzQ5OGRiIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMjk4MGI5Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIGZpbGw9InVybCgjYmcpIi8+PHBhdGggZD0iTSA1MS4yIDI1NiBMIDEyOCAyNTYgTCAxNzkuMiAxNzAuNjcgTCAyMzAuNCAzNDEuMzMgTCAyODEuNiAyMTMuMzMgTCAzMzIuOCAyNTYgTCA0NjAuOCAyNTYiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMjUuNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBmaWxsPSJub25lIi8+PHJlY3QgeD0iMzY4IiB5PSI5NiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjY0IiBmaWxsPSJ3aGl0ZSIvPjxyZWN0IHg9IjM1MiIgeT0iMTEyIiB3aWR0aD0iNjQiIGhlaWdodD0iMzIiIGZpbGw9IndoaXRlIi8+PC9zdmc+">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .header h1 {
+            color: #2c3e50;
+            font-size: 24px;
+        }
+
+        .ficha-number {
+            color: #e74c3c;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .screen {
+            display: none;
+        }
+
+        .screen.active {
+            display: block;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            background: #3498db;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #2c3e50;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 60px;
+        }
+
+        .medication-entry {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 100px;
+            gap: 10px;
+            margin-bottom: 10px;
+            align-items: end;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            background: #3498db;
+            color: white;
+        }
+
+        .btn-success {
+            background: #27ae60;
+            color: white;
+        }
+
+        .btn-danger {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .btn-warning {
+            background: #f39c12;
+            color: white;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .btn-large {
+            padding: 20px 40px;
+            font-size: 20px;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+
+        /* Tela de monitoramento */
+        .monitoring-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: #34495e;
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .timer-display {
+            font-size: 36px;
+            font-weight: bold;
+            color: #2ecc71;
+            text-align: center;
+        }
+
+        .patient-info {
+            font-size: 14px;
+        }
+
+        .patient-info strong {
+            color: #3498db;
+        }
+
+        .parameters-selector {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #ecf0f1;
+            border-radius: 8px;
+        }
+
+        .param-button {
+            padding: 10px 20px;
+            border: 3px solid transparent;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s;
+            user-select: none;
+        }
+
+        .param-button:hover {
+            transform: scale(1.05);
+        }
+
+        .param-button.active {
+            border-color: #2c3e50;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        .param-fc { background: #e74c3c; color: white; }
+        .param-fr { background: #3498db; color: white; }
+        .param-temp { background: #f39c12; color: white; }
+        .param-pa { background: #9b59b6; color: white; }
+        .param-spo2 { background: #1abc9c; color: white; }
+        .param-tpc { background: #e67e22; color: white; }
+        .param-plano { background: #34495e; color: white; }
+        .param-palpebral { background: #16a085; color: white; }
+        .param-corneal { background: #27ae60; color: white; }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 700px;
+            border: 2px solid #2c3e50;
+            background: white;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        #anesthesiaChart {
+            width: 100%;
+            height: 100%;
+            cursor: crosshair;
+        }
+
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legend-symbol {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .observations {
+            width: 100%;
+            min-height: 80px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: Arial, sans-serif;
+        }
+
+        .alarm-notification {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #e74c3c;
+            color: white;
+            padding: 30px 50px;
+            border-radius: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            z-index: 1000;
+            display: none;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.05); }
+        }
+
+        .quick-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #2ecc71;
+            animation: blink 2s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .close-modal {
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #999;
+        }
+
+        .close-modal:hover {
+            color: #333;
+        }
+
+        .protocol-list {
+            margin: 20px 0;
+        }
+
+        .protocol-item {
+            background: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+
+        .protocol-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .protocol-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .protocol-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .protocol-quick-btn {
+            padding: 8px 16px;
+            border: 2px solid #3498db;
+            background: white;
+            color: #3498db;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .protocol-quick-btn:hover {
+            background: #3498db;
+            color: white;
+        }
+
+        .emergency-buttons {
+            display: flex;
+            gap: 10px;
+            margin: 15px 0;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn-hypotension {
+            background: #f39c12;
+            color: white;
+            padding: 8px 40px;
+            font-size: 14px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+        }
+
+        .btn-hypotension:hover {
+            background: #e67e22;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+        }
+
+        .btn-emergency {
+            background: #e74c3c;
+            color: white;
+            padding: 8px 40px;
+            font-size: 14px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+            letter-spacing: 1px;
+        }
+
+        .btn-emergency:hover {
+            background: #c0392b;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.4);
+        }
+
+        .btn-manage-emergency {
+            background: #95a5a6;
+            color: white;
+            padding: 6px 12px;
+            font-size: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-manage-emergency:hover {
+            background: #7f8c8d;
+        }
+
+        .emergency-protocol-display {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .emergency-protocol-display.hypotension {
+            border-left: 5px solid #f39c12;
+        }
+
+        .emergency-protocol-display.cardiac {
+            border-left: 5px solid #e74c3c;
+        }
+
+        .protocol-medication {
+            background: #f8f9fa;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 3px solid #3498db;
+        }
+
+        .protocol-medication strong {
+            color: #2c3e50;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .calculated-dose {
+            font-size: 20px;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-top: 5px;
+        }
+
+        .emergency-med-entry {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 10px;
+            align-items: end;
+        }
+
+        .whatsapp-input {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #25d366;
+            border-radius: 5px;
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: white;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-whatsapp:hover {
+            background: #20ba5a;
+            transform: translateY(-2px);
+        }
+
+        /* Cronômetro Cirúrgico */
+        .surgery-timer {
+            position: fixed;
+            top: 120px;
+            right: 20px;
+            background: rgba(52, 73, 94, 0.95);
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 100;
+            display: none;
+        }
+
+        .surgery-timer.active {
+            display: block;
+        }
+
+        .surgery-timer-label {
+            color: #ecf0f1;
+            font-size: 11px;
+            text-align: center;
+            margin-bottom: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .surgery-timer-display {
+            font-size: 24px;
+            font-weight: bold;
+            color: #f39c12;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+        }
+
+        .btn-start-surgery {
+            background: #f39c12;
+            color: white;
+            padding: 10px 30px;
+            font-size: 14px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn-start-surgery:hover {
+            background: #e67e22;
+            transform: translateY(-2px);
+        }
+
+        .btn-start-surgery:disabled {
+            background: #95a5a6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-start-surgery.paused {
+            background: #27ae60;
+        }
+
+        .btn-start-surgery.paused:hover {
+            background: #229954;
+        }
+
+        .btn-resume {
+            background: #9b59b6;
+            color: white;
+            padding: 15px 35px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin: 20px auto;
+            display: none;
+        }
+
+        .btn-resume:hover {
+            background: #8e44ad;
+            transform: translateY(-2px);
+        }
+
+        .finished-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 999;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .finished-overlay.active {
+            display: flex;
+        }
+
+        .finished-message {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 500px;
+        }
+
+        .finished-message h2 {
+            color: #27ae60;
+            margin-bottom: 20px;
+        }
+
+        /* Modal de Hipotensão Interativo */
+        .hypotension-modal {
+            display: none;
+            position: fixed;
+            z-index: 3000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hypotension-modal.active {
+            display: flex;
+        }
+
+        .hypotension-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 700px;
+            width: 90%;
+            max-height: 85vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        .hypotension-header {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            color: white;
+            padding: 20px;
+            margin: -30px -30px 20px -30px;
+            border-radius: 15px 15px 0 0;
+            text-align: center;
+        }
+
+        .hypotension-header h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .protocol-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 5px solid #3498db;
+        }
+
+        .protocol-section h3 {
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .btn-protocol {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-bottom: 10px;
+        }
+
+        .btn-fluid-bolus {
+            background: #1abc9c;
+            color: white;
+        }
+
+        .btn-fluid-bolus:hover {
+            background: #16a085;
+            transform: translateY(-2px);
+        }
+
+        .btn-fluid-bolus.active {
+            background: #27ae60;
+        }
+
+        .btn-norepinephrine {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .btn-norepinephrine:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        .fluid-timer {
+            background: #e8f8f5;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            text-align: center;
+            display: none;
+        }
+
+        .fluid-timer.active {
+            display: block;
+        }
+
+        .fluid-timer-display {
+            font-size: 32px;
+            font-weight: bold;
+            color: #16a085;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+        }
+
+        .severity-selector {
+            display: none;
+            margin-top: 15px;
+        }
+
+        .severity-selector.active {
+            display: block;
+        }
+
+        .severity-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .btn-severity {
+            padding: 12px;
+            border: 2px solid #ddd;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .btn-severity:hover {
+            border-color: #e74c3c;
+            background: #fef5f5;
+        }
+
+        .btn-severity.selected {
+            background: #e74c3c;
+            color: white;
+            border-color: #e74c3c;
+        }
+
+        .severity-1 { border-left: 5px solid #27ae60; }
+        .severity-2 { border-left: 5px solid #f1c40f; }
+        .severity-3 { border-left: 5px solid #f39c12; }
+        .severity-4 { border-left: 5px solid #e67e22; }
+        .severity-5 { border-left: 5px solid #c0392b; }
+
+        .calculation-result {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border: 2px solid #e74c3c;
+            display: none;
+        }
+
+        .calculation-result.active {
+            display: block;
+        }
+
+        .calc-item {
+            padding: 10px;
+            margin: 8px 0;
+            background: #fef5f5;
+            border-radius: 5px;
+            border-left: 3px solid #e74c3c;
+        }
+
+        .calc-label {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .calc-value {
+            font-size: 20px;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        .calc-info {
+            font-size: 12px;
+            color: #7f8c8d;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+
+        /* Cronômetro de Norepinefrina */
+        .norepi-timer {
+            background: #fef5f5;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            text-align: center;
+            display: none;
+            border: 2px solid #e74c3c;
+        }
+
+        .norepi-timer.active {
+            display: block;
+        }
+
+        .norepi-timer-display {
+            font-size: 32px;
+            font-weight: bold;
+            color: #e74c3c;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+        }
+
+        .btn-start-norepi {
+            background: #e74c3c;
+            color: white;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .btn-start-norepi:hover {
+            background: #c0392b;
+        }
+
+        .btn-start-norepi.active {
+            background: #27ae60;
+        }
+
+        .btn-start-fluid {
+            background: #1abc9c;
+            color: white;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .btn-start-fluid:hover {
+            background: #16a085;
+        }
+
+        .btn-start-fluid.active {
+            background: #27ae60;
+        }
+
+        /* Modal Minimizado */
+        .hypotension-minimized {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            z-index: 2500;
+            display: none;
+            min-width: 250px;
+            border: 3px solid #f39c12;
+        }
+
+        .hypotension-minimized.active {
+            display: block;
+        }
+
+        .minimized-header {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            color: white;
+            padding: 10px;
+            margin: -15px -15px 10px -15px;
+            border-radius: 7px 7px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .minimized-header h4 {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .btn-maximize {
+            background: rgba(255,255,255,0.3);
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .btn-maximize:hover {
+            background: rgba(255,255,255,0.5);
+        }
+
+        .minimized-timer {
+            padding: 8px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            margin-bottom: 8px;
+        }
+
+        .minimized-timer-label {
+            font-size: 11px;
+            color: #555;
+            font-weight: bold;
+        }
+
+        .minimized-timer-value {
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+        }
+
+        .timer-fluid {
+            color: #16a085;
+        }
+
+        .timer-norepi {
+            color: #e74c3c;
+        }
+
+        .btn-minimize {
+            background: rgba(255,255,255,0.9);
+            color: #f39c12;
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: bold;
+            border: 2px solid #f39c12;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-minimize:hover {
+            background: #f39c12;
+            color: white;
+        }
+
+        /* PWA Install Prompt */
+        .pwa-install-prompt {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            z-index: 10000;
+            display: none;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .pwa-install-prompt.show {
+            display: block;
+            animation: slideUp 0.3s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateX(-50%) translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(-50%) translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .pwa-install-prompt h3 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+        }
+
+        .pwa-install-prompt p {
+            margin: 0 0 15px 0;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .pwa-install-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .btn-pwa-install {
+            background: white;
+            color: #3498db;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-pwa-install:hover {
+            background: #ecf0f1;
+            transform: scale(1.05);
+        }
+
+        .btn-pwa-dismiss {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 12px 24px;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-pwa-dismiss:hover {
+            background: rgba(255,255,255,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>FICHA ANESTÉSICA VETERINÁRIA</h1>
+            <div class="ficha-number">FICHA <span id="fichaNumber">1</span></div>
+        </div>
+
+        <!-- TELA 1: Formulário Inicial -->
+        <div id="formScreen" class="screen active">
+            <!-- Identificação do Paciente -->
+            <div class="section">
+                <div class="section-title">IDENTIFICAÇÃO DO PACIENTE</div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Nome do Paciente:</label>
+                        <input type="text" id="patientName" placeholder="Nome do animal">
+                    </div>
+                    <div class="form-group">
+                        <label>Tutor:</label>
+                        <input type="text" id="tutorName" placeholder="Nome do tutor">
+                    </div>
+                    <div class="form-group">
+                        <label>Espécie:</label>
+                        <input type="text" id="species" placeholder="Canino, Felino, etc">
+                    </div>
+                    <div class="form-group">
+                        <label>Raça:</label>
+                        <input type="text" id="breed" placeholder="Raça">
+                    </div>
+                    <div class="form-group">
+                        <label>Peso (kg):</label>
+                        <input type="number" id="weight" step="0.1" placeholder="0.0">
+                    </div>
+                    <div class="form-group">
+                        <label>Idade:</label>
+                        <input type="text" id="age" placeholder="Ex: 5 anos">
+                    </div>
+                    <div class="form-group">
+                        <label>Classificação ASA:</label>
+                        <select id="asaClass">
+                            <option value="">Selecione...</option>
+                            <option value="ASA I">ASA I - Saudável</option>
+                            <option value="ASA II">ASA II - Doença sistêmica leve</option>
+                            <option value="ASA III">ASA III - Doença sistêmica grave</option>
+                            <option value="ASA IV">ASA IV - Doença grave com risco de vida</option>
+                            <option value="ASA V">ASA V - Moribundo</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Cirurgia a ser Realizada:</label>
+                        <input type="text" id="surgery" placeholder="Tipo de cirurgia">
+                    </div>
+                    <div class="form-group">
+                        <label>Veterinário Responsável:</label>
+                        <input type="text" id="vetResponsible" list="veterinariansList" placeholder="Nome do veterinário">
+                    </div>
+                    <div class="form-group">
+                        <label>Cirurgião:</label>
+                        <input type="text" id="surgeon" list="veterinariansList" placeholder="Nome do cirurgião">
+                    </div>
+                    <div class="form-group">
+                        <label>Anestesista:</label>
+                        <input type="text" id="anesthetist" list="veterinariansList" placeholder="Nome do anestesista">
+                    </div>
+                </div>
+                
+                <!-- Lista de veterinários para autocomplete -->
+                <datalist id="veterinariansList">
+                    <option value="Dr. Adélio Gurgel do Amaral Junior">
+                    <option value="Dra. Kalinca Gromboni">
+                    <option value="Dra. Laiandra Orefice Negrão">
+                    <option value="Dr. Leonardo Gonçalves de Oliveira">
+                    <option value="Dra. Lorena Ortega Silvestre">
+                    <option value="Dra. Luana Campos de Pieri">
+                    <option value="Dr. Luis Antonio Villas Boas">
+                    <option value="Dr. Marco Cesar Toni Moraes">
+                    <option value="Dra. Taine Elia de Oliveira">
+                    <option value="Dr. Vinícius Camargo Fração">
+                </datalist>
+                
+                <div class="form-group" style="margin-top: 15px;">
+                    <label>Comorbidades:</label>
+                    <textarea id="comorbidities" placeholder="Descreva comorbidades relevantes..."></textarea>
+                </div>
+            </div>
+
+            <!-- Protocolos Padrão -->
+            <div class="section">
+                <div class="section-title">PROTOCOLOS PADRÃO</div>
+                <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                    <button class="btn btn-primary" onclick="openProtocolManager()">⚙️ Gerenciar Protocolos</button>
+                    <div id="protocolButtons" class="protocol-buttons"></div>
+                </div>
+            </div>
+
+            <!-- MPA -->
+            <div class="section">
+                <div class="section-title">MEDICAÇÃO PRÉ-ANESTÉSICA (MPA)</div>
+                <div id="mpaList"></div>
+                <button class="btn btn-primary" onclick="addMedication('mpa')">+ Adicionar Medicação MPA</button>
+            </div>
+
+            <!-- Protocolo Anestésico -->
+            <div class="section">
+                <div class="section-title">PROTOCOLO ANESTÉSICO</div>
+                <div id="protocolList"></div>
+                <button class="btn btn-primary" onclick="addMedication('protocol')">+ Adicionar Medicação</button>
+            </div>
+
+            <!-- Botão START -->
+            <button class="btn btn-success btn-large" onclick="startAnesthesia()">
+                🚀 INICIAR ANESTESIA
+            </button>
+        </div>
+
+        <!-- TELA 2: Monitoramento -->
+        <div id="monitoringScreen" class="screen">
+            <div class="monitoring-header">
+                <div class="patient-info">
+                    <div><strong>Paciente:</strong> <span id="displayPatientName"></span></div>
+                    <div><strong>Cirurgia:</strong> <span id="displaySurgery"></span></div>
+                </div>
+                <div>
+                    <div class="timer-display" id="timerDisplay">00:00:00</div>
+                    <div style="text-align: center; font-size: 12px;">
+                        <span class="status-indicator"></span> ANESTESIA EM ANDAMENTO
+                    </div>
+                    <button class="btn-start-surgery" id="startSurgeryBtn" onclick="startSurgery()">
+                        ⚕️ Iniciar Cirurgia
+                    </button>
+                </div>
+                <div class="patient-info">
+                    <div><strong>Anestesista:</strong> <span id="displayAnesthetist"></span></div>
+                    <div><strong>Ficha:</strong> <span id="displayFichaNumber">1</span></div>
+                </div>
+            </div>
+
+            <!-- Cronômetro Cirúrgico Flutuante -->
+            <div class="surgery-timer" id="surgeryTimer">
+                <div class="surgery-timer-label">⚕️ Tempo Cirúrgico</div>
+                <div class="surgery-timer-display" id="surgeryTimerDisplay">00:00:00</div>
+            </div>
+
+            <!-- Seletor de Parâmetros -->
+            <div class="section">
+                <div class="section-title">SELECIONE O PARÂMETRO E MARQUE NO GRÁFICO</div>
+                
+                <div class="parameters-selector">
+                    <button class="param-button param-fc" data-param="fc" onclick="selectParameter('fc')">
+                        ♥ FC
+                    </button>
+                    <button class="param-button param-fr" data-param="fr" onclick="selectParameter('fr')">
+                        🫁 FR
+                    </button>
+                    <button class="param-button param-temp" data-param="temp" onclick="selectParameter('temp')">
+                        🌡️ TEMP
+                    </button>
+                    <button class="param-button param-pa" data-param="pa" onclick="selectParameter('pa')">
+                        ⊕ PA
+                    </button>
+                    <button class="param-button param-spo2" data-param="spo2" onclick="selectParameter('spo2')">
+                        ◆ SpO2
+                    </button>
+                    <button class="param-button param-tpc" data-param="tpc" onclick="selectParameter('tpc')">
+                        ⏱ TPC
+                    </button>
+                    <button class="param-button param-plano" data-param="plano" onclick="selectParameter('plano')">
+                        ≡ Plano
+                    </button>
+                    <button class="param-button param-palpebral" data-param="palpebral_pos" onclick="selectParameter('palpebral_pos')">
+                        👁 + Palpebral
+                    </button>
+                    <button class="param-button param-palpebral-neg" data-param="palpebral_neg" onclick="selectParameter('palpebral_neg')" style="background: #95a5a6; color: white;">
+                        👁 - Palpebral
+                    </button>
+                    <button class="param-button param-corneal" data-param="corneal_pos" onclick="selectParameter('corneal_pos')">
+                        ◉ + Corneal
+                    </button>
+                    <button class="param-button param-corneal-neg" data-param="corneal_neg" onclick="selectParameter('corneal_neg')" style="background: #7f8c8d; color: white;">
+                        ◉ - Corneal
+                    </button>
+                </div>
+
+                <!-- Campo de entrada numérica -->
+                <div id="numericInput" style="display: none; padding: 15px; background: #ecf0f1; border-radius: 8px; margin-bottom: 15px;">
+                    <div style="display: flex; gap: 15px; align-items: center;">
+                        <label style="font-weight: bold; font-size: 16px;">
+                            Valor de <span id="paramName"></span>:
+                        </label>
+                        <input type="number" id="paramValue" style="padding: 10px; font-size: 16px; border: 2px solid #3498db; border-radius: 5px; width: 150px;" placeholder="Digite o valor">
+                        <span id="paramUnit" style="font-size: 14px; color: #555;"></span>
+                        <button class="btn btn-success" onclick="addValueFromInput()">✓ Adicionar no Tempo Atual</button>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <canvas id="anesthesiaChart"></canvas>
+                </div>
+
+                <!-- Botões de Emergência - ABAIXO DO GRÁFICO -->
+                <div class="emergency-buttons">
+                    <button class="btn-hypotension" onclick="showHypotensionProtocol()">
+                        🩸 Hipotensão
+                    </button>
+                    <button class="btn-emergency" onclick="showEmergencyProtocol()">
+                        🚨 EMERGÊNCIA
+                    </button>
+                    <button class="btn-manage-emergency" onclick="openEmergencyProtocolManager()" title="Gerenciar Protocolos de Emergência">
+                        ⚙️
+                    </button>
+                </div>
+
+                <div class="legend">
+                    <div class="legend-item">
+                        <span class="legend-symbol" style="color: #e74c3c;">♥</span>
+                        <span>FC (bpm): 0-200</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-symbol" style="color: #3498db;">🫁</span>
+                        <span>FR (mpm): 0-60</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-symbol" style="color: #f39c12;">🌡️</span>
+                        <span>TEMP (°C): 35-40</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-symbol" style="color: #9b59b6;">⊕</span>
+                        <span>PA (mmHg): 0-200</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-symbol" style="color: #1abc9c;">◆</span>
+                        <span>SpO2 (%): 80-100</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-symbol" style="color: #e67e22;">⏱</span>
+                        <span>TPC (seg): 1-3</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-symbol" style="color: #34495e;">≡</span>
+                        <span>Plano: I-IV</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-symbol" style="color: #16a085;">👁+</span>
+                        <span>Palpebral Presente</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-symbol" style="color: #95a5a6;">👁-</span>
+                        <span>Palpebral Ausente</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-symbol" style="color: #27ae60;">◉+</span>
+                        <span>Corneal Presente</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-symbol" style="color: #7f8c8d;">◉-</span>
+                        <span>Corneal Ausente</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Observações -->
+            <div class="section">
+                <div class="section-title">OBSERVAÇÕES E INTERCORRÊNCIAS</div>
+                <textarea class="observations" id="observations" placeholder="Registre intercorrências, ajustes de medicação, fluidoterapia, etc..."></textarea>
+            </div>
+
+            <!-- Ações -->
+            <div class="quick-actions">
+                <button class="btn btn-warning" onclick="backToForm()">⬅️ Voltar aos Dados</button>
+                <button class="btn btn-success" onclick="printSheet()">🖨️ Imprimir Ficha</button>
+                <button class="btn btn-primary" onclick="saveSheet()">💾 Salvar Ficha</button>
+                <button class="btn btn-primary" onclick="saveSheetAs()" style="background: #8e44ad;">💾 Salvar Como...</button>
+                <button class="btn-whatsapp" onclick="openWhatsAppSend()">📱 Encaminhar WhatsApp</button>
+                <button class="btn btn-danger" onclick="finishAnesthesia()">⏹️ Finalizar Anestesia</button>
+            </div>
+
+            <!-- Botão de Retomar Anestesia -->
+            <button class="btn-resume" id="resumeBtn" onclick="resumeAnesthesia()">
+                🔄 Retomar Anestesia
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal Interativo de Hipotensão -->
+    <div class="hypotension-modal" id="hypotensionInteractiveModal">
+        <div class="hypotension-content">
+            <div class="hypotension-header">
+                <h2>🩸 PROTOCOLO DE HIPOTENSÃO</h2>
+                <p style="margin: 5px 0 0 0; font-size: 14px;">Paciente: <span id="hypoPatientName"></span> | Peso: <span id="hypoPatientWeight"></span> kg</p>
+            </div>
+
+            <!-- Prova de Carga -->
+            <div class="protocol-section">
+                <h3>💧 Prova de Carga (Cristaloide)</h3>
+                <button class="btn-protocol btn-fluid-bolus" onclick="calculateFluidBolus()">
+                    📊 Calcular Prova de Carga
+                </button>
+                
+                <div class="calculation-result" id="fluidBolusResult" style="border-color: #1abc9c;">
+                    <!-- Resultados dos cálculos aparecerão aqui -->
+                </div>
+                
+                <div class="fluid-timer" id="fluidTimer">
+                    <div style="font-size: 14px; color: #16a085; font-weight: bold;">⏱️ PROVA DE CARGA EM ANDAMENTO</div>
+                    <div class="fluid-timer-display" id="fluidTimerDisplay">00:00</div>
+                    <div style="font-size: 12px; color: #555;">Meta: 15 minutos</div>
+                </div>
+            </div>
+
+            <!-- Norepinefrina -->
+            <div class="protocol-section">
+                <h3>💉 Norepinefrina - Protocolo Escalonado</h3>
+                <p style="font-size: 13px; color: #555; margin-bottom: 10px;">
+                    ⚠️ Início sempre com dose mínima | Aumento automático a cada 10 minutos
+                </p>
+                <button class="btn-protocol btn-norepinephrine" onclick="calculateNorepinephrine()">
+                    📊 Calcular Protocolo Completo
+                </button>
+                
+                <div class="calculation-result" id="norepinephrineResult">
+                    <!-- Resultados dos cálculos aparecerão aqui -->
+                </div>
+
+                <div class="norepi-timer" id="norepiTimer">
+                    <div style="font-size: 14px; color: #e74c3c; font-weight: bold;">💉 INFUSÃO DE NOREPINEFRINA</div>
+                    <div class="norepi-timer-display" id="norepiTimerDisplay">00:00:00</div>
+                    <div id="norepiDoseLevel" style="font-size: 14px; color: #555; margin-top: 5px;">Dose atual: Nível 1 (0,05 mcg/kg/min)</div>
+                    <div id="norepiNextIncrease" style="font-size: 12px; color: #e67e22; margin-top: 5px; font-weight: bold;"></div>
+                </div>
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn-minimize" onclick="minimizeHypotensionModal()">🔽 Minimizar</button>
+                <button class="btn btn-primary" onclick="closeHypotensionModal()">✓ Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Versão Minimizada -->
+    <div class="hypotension-minimized" id="hypotensionMinimized">
+        <div class="minimized-header">
+            <h4>🩸 Protocolo Hipotensão</h4>
+            <button class="btn-maximize" onclick="maximizeHypotensionModal()">🔼 Abrir</button>
+        </div>
+        
+        <div id="minimizedTimers">
+            <!-- Cronômetros aparecerão aqui quando ativos -->
+        </div>
+    </div>
+
+    <!-- PWA Install Prompt -->
+    <div class="pwa-install-prompt" id="pwaInstallPrompt">
+        <h3>📱 Instalar Aplicativo</h3>
+        <p>Instale a Ficha Anestésica na tela inicial para acesso rápido e uso offline!</p>
+        <div class="pwa-install-buttons">
+            <button class="btn-pwa-install" onclick="installPWA()">✓ Instalar</button>
+            <button class="btn-pwa-dismiss" onclick="dismissPWAPrompt()">Agora não</button>
+        </div>
+    </div>
+
+    <!-- Overlay de Finalização -->
+    <div class="finished-overlay" id="finishedOverlay">
+        <div class="finished-message">
+            <h2>✅ Anestesia Finalizada</h2>
+            <p style="margin-bottom: 20px;">A anestesia foi finalizada com sucesso.</p>
+            <div style="display: flex; gap: 10px; justify-content: center;">
+                <button class="btn btn-primary" onclick="closeFinishedOverlay()">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notificação de Alarme -->
+    <div id="alarmNotification" class="alarm-notification">
+        ⏰ REGISTRAR PARÂMETROS
+    </div>
+
+    <!-- Modal de Gerenciamento de Protocolos -->
+    <div id="protocolModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Gerenciar Protocolos Anestésicos</h2>
+                <span class="close-modal" onclick="closeProtocolManager()">&times;</span>
+            </div>
+
+            <div class="protocol-list" id="protocolListModal"></div>
+
+            <button class="btn btn-success" onclick="createNewProtocol()">+ Novo Protocolo</button>
+        </div>
+    </div>
+
+    <!-- Modal de Gerenciamento de Protocolos de Emergência -->
+    <div id="emergencyProtocolModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Gerenciar Protocolos de Emergência</h2>
+                <span class="close-modal" onclick="closeEmergencyProtocolManager()">&times;</span>
+            </div>
+
+            <div class="section">
+                <div class="section-title" style="background: #f39c12;">PROTOCOLO DE HIPOTENSÃO</div>
+                
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label style="font-weight: bold; color: #2c3e50;">Prova de Carga (Cristaloide):</label>
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <input type="number" id="fluidBolusDose" step="1" style="padding: 8px; width: 100px; border: 1px solid #ddd; border-radius: 4px;" placeholder="10">
+                        <span>ml/kg</span>
+                    </div>
+                    <small style="color: #7f8c8d;">Exemplo: 10 ml/kg de Ringer Lactato ou Solução Fisiológica 0.9%</small>
+                </div>
+
+                <div id="hypotensionProtocolList"></div>
+                <button class="btn btn-primary" onclick="addEmergencyMedication('hypotension')">+ Adicionar Medicação</button>
+            </div>
+
+            <div class="section" style="margin-top: 20px;">
+                <div class="section-title" style="background: #e74c3c;">PROTOCOLO DE EMERGÊNCIA (PARADA CARDÍACA)</div>
+                <div id="cardiacProtocolList"></div>
+                <button class="btn btn-primary" onclick="addEmergencyMedication('cardiac')">+ Adicionar Medicação</button>
+            </div>
+
+            <div style="display: flex; gap: 10px; margin-top: 20px; justify-content: center;">
+                <button class="btn btn-success" onclick="saveEmergencyProtocols()">💾 Salvar Protocolos</button>
+                <button class="btn btn-danger" onclick="closeEmergencyProtocolManager()">✕ Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Exibição de Protocolo de Emergência -->
+    <div id="emergencyDisplayModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="emergencyDisplayTitle">PROTOCOLO DE EMERGÊNCIA</h2>
+                <span class="close-modal" onclick="closeEmergencyDisplay()">&times;</span>
+            </div>
+
+            <div id="emergencyDisplayContent"></div>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn btn-primary" onclick="closeEmergencyDisplay()">✓ Entendido</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Envio por WhatsApp -->
+    <div id="whatsappModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>📱 Encaminhar Ficha por WhatsApp</h2>
+                <span class="close-modal" onclick="closeWhatsAppModal()">&times;</span>
+            </div>
+
+            <div style="padding: 20px;">
+                <p style="margin-bottom: 15px; color: #555;">
+                    Digite o número do WhatsApp (com DDD, sem espaços ou caracteres especiais):
+                </p>
+                
+                <input type="tel" id="whatsappNumber" class="whatsapp-input" placeholder="Ex: 11999887766" maxlength="11">
+                
+                <p style="margin-top: 10px; font-size: 12px; color: #999;">
+                    Exemplo: Para (11) 99988-7766, digite: 11999887766
+                </p>
+
+                <div style="display: flex; gap: 10px; margin-top: 20px; justify-content: center;">
+                    <button class="btn-whatsapp" onclick="sendWhatsApp()">
+                        ✓ Enviar pelo WhatsApp
+                    </button>
+                    <button class="btn btn-danger" onclick="closeWhatsAppModal()">
+                        ✕ Cancelar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Criação/Edição de Protocolo -->
+    <div id="protocolEditModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="protocolEditTitle">Novo Protocolo</h2>
+                <span class="close-modal" onclick="closeProtocolEdit()">&times;</span>
+            </div>
+
+            <div class="form-group">
+                <label>Nome do Protocolo:</label>
+                <input type="text" id="protocolNameInput" placeholder="Ex: Protocolo Canino Padrão">
+            </div>
+
+            <div class="section" style="margin-top: 20px;">
+                <div class="section-title">MEDICAÇÃO PRÉ-ANESTÉSICA (MPA)</div>
+                <div id="protocolMPAList"></div>
+                <button class="btn btn-primary" onclick="addProtocolMedication('mpa')">+ Adicionar MPA</button>
+            </div>
+
+            <div class="section" style="margin-top: 20px;">
+                <div class="section-title">PROTOCOLO ANESTÉSICO</div>
+                <div id="protocolAnesthesiaList"></div>
+                <button class="btn btn-primary" onclick="addProtocolMedication('anesthesia')">+ Adicionar Medicação</button>
+            </div>
+
+            <div style="display: flex; gap: 10px; margin-top: 20px;">
+                <button class="btn btn-success" onclick="saveProtocol()">💾 Salvar Protocolo</button>
+                <button class="btn btn-danger" onclick="closeProtocolEdit()">✕ Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let selectedParam = null;
+        let currentFicha = 1;
+        let startTime = null;
+        let elapsedSeconds = 0;
+        let timerInterval = null;
+        let lastAlarmMinute = 0;
+        let dataPoints = {};
+        let canvas, ctx;
+        let medications = { mpa: [], protocol: [] };
+        let patientData = {};
+
+        // Cronômetro cirúrgico
+        let surgeryStartTime = null;
+        let surgeryElapsedSeconds = 0;
+        let surgeryTimerInterval = null;
+        let isSurgeryActive = false;
+        let isSurgeryPaused = false;
+        let surgeryIntervals = []; // Array para armazenar intervalos de cirurgia [{start: tempo, end: tempo}]
+        let currentSurgeryStart = null; // Tempo de início do intervalo atual
+        let isAnesthesiaFinished = false;
+
+        // Controle do protocolo de hipotensão
+        let fluidBolusActive = false;
+        let fluidBolusStartTime = null;
+        let fluidBolusElapsed = 0;
+        let fluidBolusInterval = null;
+        let norepiActive = false;
+        let norepiStartTime = null;
+        let norepiElapsed = 0;
+        let norepiInterval = null;
+        let currentNorepiCalculation = null; // Armazenar última configuração
+        let currentDoseLevel = 1; // Nível atual (1-5)
+        let norepiProtocol = null; // Armazenar protocolo completo com todas as doses
+
+        // Audio context para bip
+        let audioContext;
+        
+        // Configuração do gráfico
+        const chartConfig = {
+            width: 0,
+            height: 0,
+            marginLeft: 80,
+            marginRight: 40,
+            marginTop: 40,
+            marginBottom: 60,
+            timeIntervals: 13,
+            maxTime: 120
+        };
+
+        // Parâmetros e suas escalas
+        const parameters = {
+            fc: { symbol: '♥', color: '#e74c3c', min: 0, max: 200, unit: 'bpm', name: 'FC', numeric: true },
+            fr: { symbol: '🫁', color: '#3498db', min: 0, max: 60, unit: 'mpm', name: 'FR', numeric: true },
+            temp: { symbol: '🌡️', color: '#f39c12', min: 35, max: 40, unit: '°C', name: 'TEMP', numeric: true, step: 0.5 },
+            pa: { symbol: '⊕', color: '#9b59b6', min: 0, max: 200, unit: 'mmHg', name: 'PA', numeric: true },
+            spo2: { symbol: '◆', color: '#1abc9c', min: 80, max: 100, unit: '%', name: 'SpO2', numeric: true },
+            tpc: { symbol: '⏱', color: '#e67e22', min: 1, max: 3, unit: 'seg', name: 'TPC', numeric: true, step: 0.5 },
+            plano: { symbol: '≡', color: '#34495e', min: 1, max: 4, unit: '', name: 'Plano', numeric: true },
+            palpebral_pos: { symbol: '👁+', color: '#16a085', min: 1, max: 1, unit: '', name: 'Palpebral +', fixedValue: 1, numeric: false },
+            palpebral_neg: { symbol: '👁-', color: '#95a5a6', min: 0, max: 0, unit: '', name: 'Palpebral -', fixedValue: 0, numeric: false },
+            corneal_pos: { symbol: '◉+', color: '#27ae60', min: 1, max: 1, unit: '', name: 'Corneal +', fixedValue: 1, numeric: false },
+            corneal_neg: { symbol: '◉-', color: '#7f8c8d', min: 0, max: 0, unit: '', name: 'Corneal -', fixedValue: 0, numeric: false },
+            hypotension_event: { symbol: '🩸', color: '#f39c12', min: 0, max: 0, unit: '', name: 'Hipotensão', fixedValue: 0, numeric: false, isEvent: true },
+            emergency_event: { symbol: '🚨', color: '#e74c3c', min: 0, max: 0, unit: '', name: 'Emergência', fixedValue: 0, numeric: false, isEvent: true }
+        };
+
+        let selectedPoint = null;
+        let clickTimer = null;
+        let clickCount = 0;
+        let savedProtocols = [];
+        let currentEditingProtocol = null;
+        let protocolMedications = { mpa: [], anesthesia: [] };
+        let emergencyProtocols = { hypotension: [], cardiac: [], fluidBolus: 10 };
+
+        // Inicializar
+        window.onload = function() {
+            canvas = document.getElementById('anesthesiaChart');
+            ctx = canvas.getContext('2d');
+            
+            addMedication('mpa');
+            addMedication('protocol');
+
+            try {
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            } catch(e) {
+                console.log('Audio not supported');
+            }
+
+            loadProtocols();
+            renderProtocolButtons();
+            loadEmergencyProtocols();
+        };
+
+        function addMedication(type) {
+            const list = document.getElementById(type + 'List');
+            
+            const div = document.createElement('div');
+            div.className = 'medication-entry';
+            div.innerHTML = `
+                <div class="form-group">
+                    <label>Medicação:</label>
+                    <input type="text" placeholder="Nome da medicação">
+                </div>
+                <div class="form-group">
+                    <label>Dose:</label>
+                    <input type="text" placeholder="Ex: 0.5 mg/kg">
+                </div>
+                <div class="form-group">
+                    <label>Via:</label>
+                    <select>
+                        <option value="IV">IV</option>
+                        <option value="IM">IM</option>
+                        <option value="SC">SC</option>
+                        <option value="VO">VO</option>
+                        <option value="Inalatória">Inalatória</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Horário:</label>
+                    <input type="time">
+                </div>
+                <button class="btn btn-danger" onclick="removeMedication('${type}', this)">✕</button>
+            `;
+            
+            list.appendChild(div);
+            medications[type].push(div);
+        }
+
+        function removeMedication(type, button) {
+            const entry = button.parentElement;
+            const index = medications[type].indexOf(entry);
+            if (index > -1) {
+                medications[type].splice(index, 1);
+            }
+            entry.remove();
+        }
+
+        function startAnesthesia() {
+            const patientName = document.getElementById('patientName').value;
+            if (!patientName) {
+                alert('Por favor, preencha o nome do paciente!');
+                return;
+            }
+
+            patientData = {
+                name: patientName,
+                tutor: document.getElementById('tutorName').value,
+                species: document.getElementById('species').value,
+                breed: document.getElementById('breed').value,
+                weight: document.getElementById('weight').value,
+                age: document.getElementById('age').value,
+                asaClass: document.getElementById('asaClass').value,
+                surgery: document.getElementById('surgery').value,
+                vetResponsible: document.getElementById('vetResponsible').value,
+                surgeon: document.getElementById('surgeon').value,
+                anesthetist: document.getElementById('anesthetist').value,
+                comorbidities: document.getElementById('comorbidities').value
+            };
+
+            document.getElementById('displayPatientName').textContent = patientData.name;
+            document.getElementById('displaySurgery').textContent = patientData.surgery;
+            document.getElementById('displayAnesthetist').textContent = patientData.anesthetist;
+
+            document.getElementById('formScreen').classList.remove('active');
+            document.getElementById('monitoringScreen').classList.add('active');
+
+            const container = canvas.parentElement;
+            canvas.width = container.clientWidth;
+            canvas.height = container.clientHeight;
+            chartConfig.width = canvas.width;
+            chartConfig.height = canvas.height;
+
+            startTime = new Date();
+            elapsedSeconds = 0;
+            lastAlarmMinute = 0;
+
+            timerInterval = setInterval(updateTimer, 1000);
+
+            canvas.addEventListener('click', handleChartClick);
+
+            drawChart();
+        }
+
+        function updateTimer() {
+            elapsedSeconds++;
+            
+            const hours = Math.floor(elapsedSeconds / 3600);
+            const minutes = Math.floor((elapsedSeconds % 3600) / 60);
+            const seconds = elapsedSeconds % 60;
+
+            const display = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            document.getElementById('timerDisplay').textContent = display;
+
+            drawChart();
+
+            const totalMinutes = Math.floor(elapsedSeconds / 60);
+            if (totalMinutes > 0 && totalMinutes % 10 === 0 && totalMinutes !== lastAlarmMinute) {
+                triggerAlarm();
+                lastAlarmMinute = totalMinutes;
+            }
+
+            if (elapsedSeconds >= 7200) {
+                createNewFicha();
+            }
+        }
+
+        function triggerAlarm() {
+            playBeep();
+
+            const notification = document.getElementById('alarmNotification');
+            notification.style.display = 'block';
+            
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 2000);
+        }
+
+        function playBeep() {
+            if (!audioContext) return;
+
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+
+            oscillator.frequency.value = 800;
+            oscillator.type = 'sine';
+
+            gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.2);
+
+            oscillator.start(audioContext.currentTime);
+            oscillator.stop(audioContext.currentTime + 0.2);
+        }
+
+        function selectParameter(param) {
+            document.querySelectorAll('.param-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            selectedParam = param;
+            document.querySelector(`[data-param="${param}"]`).classList.add('active');
+            
+            const paramConfig = parameters[param];
+            const numericInput = document.getElementById('numericInput');
+            
+            if (paramConfig.numeric) {
+                numericInput.style.display = 'block';
+                document.getElementById('paramName').textContent = paramConfig.name;
+                document.getElementById('paramUnit').textContent = paramConfig.unit;
+                document.getElementById('paramValue').value = '';
+                document.getElementById('paramValue').placeholder = `${paramConfig.min} - ${paramConfig.max}`;
+                
+                if (paramConfig.step) {
+                    document.getElementById('paramValue').step = paramConfig.step;
+                } else {
+                    document.getElementById('paramValue').step = '1';
+                }
+            } else {
+                numericInput.style.display = 'none';
+            }
+        }
+
+        function addValueFromInput() {
+            if (!selectedParam) {
+                alert('Selecione um parâmetro primeiro!');
+                return;
+            }
+            
+            const inputValue = parseFloat(document.getElementById('paramValue').value);
+            const param = parameters[selectedParam];
+            
+            if (isNaN(inputValue)) {
+                alert('Digite um valor válido!');
+                return;
+            }
+            
+            if (inputValue < param.min || inputValue > param.max) {
+                alert(`Valor deve estar entre ${param.min} e ${param.max}${param.unit}`);
+                return;
+            }
+            
+            const currentMinutes = Math.floor(elapsedSeconds / 60);
+            const time = Math.round(currentMinutes / 10) * 10;
+            
+            if (!dataPoints[selectedParam]) {
+                dataPoints[selectedParam] = [];
+            }
+            
+            dataPoints[selectedParam].push({ time, value: inputValue });
+            dataPoints[selectedParam].sort((a, b) => a.time - b.time);
+            
+            document.getElementById('paramValue').value = '';
+            
+            drawChart();
+        }
+
+        function drawChart() {
+            const { width, height, marginLeft, marginRight, marginTop, marginBottom } = chartConfig;
+            
+            ctx.clearRect(0, 0, width, height);
+            
+            const chartWidth = width - marginLeft - marginRight;
+            const chartHeight = height - marginTop - marginBottom;
+            
+            ctx.strokeStyle = '#ddd';
+            ctx.lineWidth = 1;
+            ctx.font = '12px Arial';
+            ctx.fillStyle = '#333';
+            
+            // Linhas verticais (tempo) - a cada 10 minutos
+            for (let i = 0; i <= chartConfig.timeIntervals; i++) {
+                const x = marginLeft + (i * chartWidth / chartConfig.timeIntervals);
+                const time = i * 10;
+                
+                ctx.beginPath();
+                ctx.moveTo(x, marginTop);
+                ctx.lineTo(x, height - marginBottom);
+                ctx.stroke();
+                
+                ctx.fillText(time + 'min', x - 15, height - marginBottom + 20);
+            }
+            
+            const yScale = [];
+            
+            for (let i = 0; i <= 35; i += 10) {
+                yScale.push(i);
+            }
+            
+            for (let i = 35.5; i <= 40; i += 0.5) {
+                yScale.push(i);
+            }
+            
+            for (let i = 50; i <= 80; i += 10) {
+                yScale.push(i);
+            }
+            
+            for (let i = 90; i <= 160; i += 10) {
+                yScale.push(i);
+            }
+            
+            for (let i = 170; i <= 200; i += 10) {
+                yScale.push(i);
+            }
+            
+            yScale.forEach(value => {
+                const y = valueToY(value);
+                
+                if (value >= 35 && value <= 40) {
+                    ctx.strokeStyle = '#f39c12';
+                    ctx.lineWidth = value % 1 === 0 ? 2 : 1;
+                } 
+                else if (value >= 80 && value <= 160) {
+                    ctx.strokeStyle = '#e8a8a8';
+                    ctx.lineWidth = value % 20 === 0 ? 2 : 1;
+                }
+                else {
+                    ctx.strokeStyle = '#ddd';
+                    ctx.lineWidth = 1;
+                }
+                
+                ctx.beginPath();
+                ctx.moveTo(marginLeft, y);
+                ctx.lineTo(width - marginRight, y);
+                ctx.stroke();
+                
+                if (value % 10 === 0 || (value >= 35 && value <= 40 && value % 1 === 0)) {
+                    if (value >= 35 && value <= 40) {
+                        ctx.fillStyle = '#f39c12';
+                    } else if (value >= 80 && value <= 160) {
+                        ctx.fillStyle = '#e74c3c';
+                    } else {
+                        ctx.fillStyle = '#333';
+                    }
+                    ctx.fillText(value, marginLeft - 30, y + 4);
+                }
+            });
+            
+            ctx.strokeStyle = '#333';
+            ctx.lineWidth = 2;
+            
+            ctx.strokeRect(marginLeft, marginTop, chartWidth, chartHeight);
+            
+            // DESENHAR FAIXAS AZUIS DOS PERÍODOS CIRÚRGICOS
+            ctx.fillStyle = 'rgba(173, 216, 230, 0.25)'; // Azul claro com 25% opacidade
+            
+            // Desenhar intervalos cirúrgicos finalizados (rastro permanente)
+            surgeryIntervals.forEach(interval => {
+                const startX = marginLeft + (interval.start / chartConfig.maxTime) * chartWidth;
+                const endX = marginLeft + (interval.end / chartConfig.maxTime) * chartWidth;
+                const width = endX - startX;
+                
+                if (width > 0) {
+                    ctx.fillRect(startX, marginTop, width, chartHeight);
+                }
+            });
+            
+            // Desenhar intervalo atual (se cirurgia estiver rodando)
+            if (currentSurgeryStart !== null && !isSurgeryPaused) {
+                const currentTime = Math.floor(elapsedSeconds / 60);
+                const startX = marginLeft + (currentSurgeryStart / chartConfig.maxTime) * chartWidth;
+                const endX = marginLeft + (currentTime / chartConfig.maxTime) * chartWidth;
+                const width = endX - startX;
+                
+                if (width > 0) {
+                    ctx.fillRect(startX, marginTop, width, chartHeight);
+                }
+            }
+            
+            // Desenhar linhas de demarcação verticais (opcional, para clareza)
+            if (surgeryIntervals.length > 0 || currentSurgeryStart !== null) {
+                ctx.strokeStyle = 'rgba(41, 128, 185, 0.4)'; // Azul mais escuro
+                ctx.lineWidth = 2;
+                ctx.setLineDash([6, 3]);
+                
+                // Linhas dos intervalos finalizados
+                surgeryIntervals.forEach(interval => {
+                    const startX = marginLeft + (interval.start / chartConfig.maxTime) * chartWidth;
+                    const endX = marginLeft + (interval.end / chartConfig.maxTime) * chartWidth;
+                    
+                    // Linha de início
+                    ctx.beginPath();
+                    ctx.moveTo(startX, marginTop);
+                    ctx.lineTo(startX, height - marginBottom);
+                    ctx.stroke();
+                    
+                    // Linha de fim
+                    ctx.beginPath();
+                    ctx.moveTo(endX, marginTop);
+                    ctx.lineTo(endX, height - marginBottom);
+                    ctx.stroke();
+                });
+                
+                // Linha de início do intervalo atual (se cirurgia estiver rodando)
+                if (currentSurgeryStart !== null && !isSurgeryPaused) {
+                    const startX = marginLeft + (currentSurgeryStart / chartConfig.maxTime) * chartWidth;
+                    
+                    ctx.beginPath();
+                    ctx.moveTo(startX, marginTop);
+                    ctx.lineTo(startX, height - marginBottom);
+                    ctx.stroke();
+                }
+                
+                ctx.setLineDash([]);
+            }
+            
+            // Desenhar linha AGORA (tempo atual)
+            if (startTime) {
+                const currentMinutes = elapsedSeconds / 60;
+                if (currentMinutes <= chartConfig.maxTime) {
+                    const x = marginLeft + (currentMinutes / chartConfig.maxTime) * chartWidth;
+                    
+                    ctx.strokeStyle = '#e74c3c';
+                    ctx.lineWidth = 3;
+                    ctx.setLineDash([5, 5]);
+                    
+                    ctx.beginPath();
+                    ctx.moveTo(x, marginTop);
+                    ctx.lineTo(x, height - marginBottom);
+                    ctx.stroke();
+                    
+                    ctx.setLineDash([]);
+                    ctx.fillStyle = '#e74c3c';
+                    ctx.font = 'bold 14px Arial';
+                    ctx.fillText('AGORA', x - 25, marginTop - 10);
+                }
+            }
+            
+            drawDataPoints();
+        }
+
+        function valueToY(value) {
+            const { height, marginTop, marginBottom } = chartConfig;
+            const chartHeight = height - marginTop - marginBottom;
+            
+            let normalizedValue;
+            
+            if (value <= 35) {
+                normalizedValue = (value / 35) * 0.15;
+            } else if (value <= 40) {
+                normalizedValue = 0.15 + ((value - 35) / 5) * 0.30;
+            } else if (value <= 80) {
+                normalizedValue = 0.45 + ((value - 40) / 40) * 0.15;
+            } else if (value <= 160) {
+                normalizedValue = 0.60 + ((value - 80) / 80) * 0.35;
+            } else {
+                normalizedValue = 0.95 + ((value - 160) / 40) * 0.05;
+            }
+            
+            return marginTop + chartHeight * (1 - normalizedValue);
+        }
+
+        function yToValue(y) {
+            const { height, marginTop, marginBottom } = chartConfig;
+            const chartHeight = height - marginTop - marginBottom;
+            
+            const normalizedY = 1 - ((y - marginTop) / chartHeight);
+            
+            if (normalizedY <= 0.15) {
+                return (normalizedY / 0.15) * 35;
+            } else if (normalizedY <= 0.45) {
+                return 35 + ((normalizedY - 0.15) / 0.30) * 5;
+            } else if (normalizedY <= 0.60) {
+                return 40 + ((normalizedY - 0.45) / 0.15) * 40;
+            } else if (normalizedY <= 0.95) {
+                return 80 + ((normalizedY - 0.60) / 0.35) * 80;
+            } else {
+                return 160 + ((normalizedY - 0.95) / 0.05) * 40;
+            }
+        }
+
+        function handleChartClick(event) {
+            const rect = canvas.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+            
+            const { width, height, marginLeft, marginRight, marginTop, marginBottom } = chartConfig;
+            const chartWidth = width - marginLeft - marginRight;
+            
+            if (x < marginLeft || x > width - marginRight || y < marginTop || y > height - marginBottom) {
+                return;
+            }
+            
+            const clickedPoint = findPointAtPosition(x, y);
+            
+            if (clickedPoint) {
+                if (confirm(`Deseja EXCLUIR este ponto?\n\nClique OK para excluir ou Cancelar para mover.`)) {
+                    dataPoints[clickedPoint.paramKey].splice(clickedPoint.index, 1);
+                    drawChart();
+                } else {
+                    startPointMove(clickedPoint);
+                }
+                return;
+            }
+            
+            if (!selectedParam) {
+                alert('Selecione um parâmetro primeiro!');
+                return;
+            }
+            
+            const time = Math.round(((x - marginLeft) / chartWidth) * chartConfig.maxTime / 10) * 10;
+            
+            const param = parameters[selectedParam];
+            let value;
+            
+            if (param.fixedValue !== undefined) {
+                value = param.fixedValue;
+            } else {
+                value = yToValue(y);
+                value = Math.max(param.min, Math.min(param.max, value));
+                
+                if (param.step) {
+                    value = Math.round(value / param.step) * param.step;
+                } else {
+                    value = Math.round(value);
+                }
+            }
+            
+            if (!dataPoints[selectedParam]) {
+                dataPoints[selectedParam] = [];
+            }
+            
+            dataPoints[selectedParam].push({ time, value });
+            dataPoints[selectedParam].sort((a, b) => a.time - b.time);
+            
+            drawChart();
+        }
+
+        function findPointAtPosition(clickX, clickY) {
+            const { width, marginLeft, marginRight } = chartConfig;
+            const chartWidth = width - marginLeft - marginRight;
+            const tolerance = 25;
+            
+            for (let paramKey in dataPoints) {
+                const points = dataPoints[paramKey];
+                for (let i = 0; i < points.length; i++) {
+                    const point = points[i];
+                    const x = marginLeft + (point.time / chartConfig.maxTime) * chartWidth;
+                    const y = valueToY(point.value);
+                    
+                    const distance = Math.sqrt(Math.pow(clickX - x, 2) + Math.pow(clickY - y, 2));
+                    
+                    if (distance <= tolerance) {
+                        return { paramKey, index: i, point };
+                    }
+                }
+            }
+            
+            return null;
+        }
+
+        function startPointMove(clickedPoint) {
+            const { paramKey, index } = clickedPoint;
+            
+            selectedPoint = clickedPoint;
+            canvas.style.cursor = 'move';
+            
+            const moveHandler = function(e) {
+                const rect = canvas.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const { width, marginLeft, marginRight } = chartConfig;
+                const chartWidth = width - marginLeft - marginRight;
+                
+                const newTime = Math.round(((x - marginLeft) / chartWidth) * chartConfig.maxTime / 10) * 10;
+                
+                const param = parameters[paramKey];
+                let newValue;
+                
+                if (param.fixedValue !== undefined) {
+                    newValue = param.fixedValue;
+                } else {
+                    newValue = yToValue(y);
+                    newValue = Math.max(param.min, Math.min(param.max, newValue));
+                    
+                    if (param.step) {
+                        newValue = Math.round(newValue / param.step) * param.step;
+                    } else {
+                        newValue = Math.round(newValue);
+                    }
+                }
+                
+                dataPoints[paramKey][index] = { time: newTime, value: newValue };
+                dataPoints[paramKey].sort((a, b) => a.time - b.time);
+                
+                drawChart();
+            };
+            
+            const upHandler = function() {
+                canvas.removeEventListener('mousemove', moveHandler);
+                canvas.removeEventListener('mouseup', upHandler);
+                canvas.style.cursor = 'crosshair';
+                selectedPoint = null;
+            };
+            
+            canvas.addEventListener('mousemove', moveHandler);
+            canvas.addEventListener('mouseup', upHandler);
+        }
+
+        function drawDataPoints() {
+            Object.keys(dataPoints).forEach(paramKey => {
+                const param = parameters[paramKey];
+                const points = dataPoints[paramKey];
+                
+                if (points.length === 0) return;
+                
+                const { width, height, marginLeft, marginRight, marginTop, marginBottom } = chartConfig;
+                const chartWidth = width - marginLeft - marginRight;
+                
+                ctx.setLineDash([]);
+                
+                if (points.length > 1 && !paramKey.includes('palpebral') && !paramKey.includes('corneal') && !param.isEvent) {
+                    ctx.strokeStyle = param.color;
+                    ctx.lineWidth = 2;
+                    ctx.beginPath();
+                    points.forEach((point, index) => {
+                        const x = marginLeft + (point.time / chartConfig.maxTime) * chartWidth;
+                        const y = valueToY(point.value);
+                        
+                        if (index === 0) {
+                            ctx.moveTo(x, y);
+                        } else {
+                            ctx.lineTo(x, y);
+                        }
+                    });
+                    ctx.stroke();
+                }
+                
+                points.forEach(point => {
+                    const x = marginLeft + (point.time / chartConfig.maxTime) * chartWidth;
+                    let y;
+                    
+                    if (param.isEvent) {
+                        if (paramKey === 'hypotension_event') {
+                            y = marginTop + 30;
+                        } else if (paramKey === 'emergency_event') {
+                            y = marginTop + 60;
+                        }
+                    } else if (paramKey === 'palpebral_pos' || paramKey === 'palpebral_neg') {
+                        y = valueToY(point.value);
+                    } else if (paramKey === 'corneal_pos' || paramKey === 'corneal_neg') {
+                        y = valueToY(point.value) + 35;
+                    } else {
+                        y = valueToY(point.value);
+                    }
+                    
+                    ctx.fillStyle = 'white';
+                    ctx.strokeStyle = param.color;
+                    ctx.lineWidth = param.isEvent ? 4 : 3;
+                    ctx.beginPath();
+                    ctx.arc(x, y, param.isEvent ? 22 : 18, 0, 2 * Math.PI);
+                    ctx.fill();
+                    ctx.stroke();
+                    
+                    ctx.fillStyle = param.color;
+                    ctx.font = param.isEvent ? 'bold 22px Arial' : 'bold 20px Arial';
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    ctx.fillText(param.symbol, x, y);
+                    
+                    if (param.numeric && !paramKey.includes('plano') && !param.isEvent) {
+                        ctx.fillStyle = '#333';
+                        ctx.font = 'bold 10px Arial';
+                        ctx.fillText(point.value.toFixed(param.step ? 1 : 0), x, y + 25);
+                    }
+                });
+                
+                ctx.textAlign = 'left';
+                ctx.textBaseline = 'alphabetic';
+            });
+        }
+
+        function createNewFicha() {
+            currentFicha++;
+            document.getElementById('fichaNumber').textContent = currentFicha;
+            document.getElementById('displayFichaNumber').textContent = currentFicha;
+            
+            dataPoints = {};
+            document.getElementById('observations').value = '';
+            
+            elapsedSeconds = 0;
+            lastAlarmMinute = 0;
+            
+            drawChart();
+            
+            alert(`Ficha ${currentFicha} iniciada automaticamente. Dados do paciente mantidos.`);
+        }
+
+        function backToForm() {
+            if (confirm('Deseja voltar aos dados? O timer continuará rodando.')) {
+                document.getElementById('monitoringScreen').classList.remove('active');
+                document.getElementById('formScreen').classList.add('active');
+            }
+        }
+
+        function saveSheet() {
+            // Capturar imagem do gráfico
+            const chartImage = canvas.toDataURL('image/png');
+            
+            // Gerar HTML completo da ficha com gráfico
+            const fichaHTML = generateFichaHTMLWithChart(chartImage);
+            
+            // Criar blob
+            const blob = new Blob([fichaHTML], { type: 'text/html' });
+            
+            // Criar URL temporária
+            const url = URL.createObjectURL(blob);
+            
+            // Criar link para download
+            const a = document.createElement('a');
+            a.href = url;
+            
+            // Nome do arquivo com nome do paciente e data
+            const patientNameClean = (patientData.name || 'Paciente').replace(/[^a-zA-Z0-9]/g, '_');
+            const dateStr = new Date().toISOString().split('T')[0];
+            a.download = `Ficha_Anestesica_${patientNameClean}_${dateStr}.html`;
+            
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            
+            // Liberar URL
+            setTimeout(() => URL.revokeObjectURL(url), 100);
+            
+            alert('Ficha salva com sucesso!');
+        }
+
+        function saveSheetAs() {
+            // Capturar imagem do gráfico
+            const chartImage = canvas.toDataURL('image/png');
+            
+            // Gerar HTML completo da ficha com gráfico
+            const fichaHTML = generateFichaHTMLWithChart(chartImage);
+            
+            // Criar blob
+            const blob = new Blob([fichaHTML], { type: 'text/html' });
+            
+            // Criar URL temporária
+            const url = URL.createObjectURL(blob);
+            
+            // Abrir em nova aba para o usuário poder salvar onde quiser
+            const newWindow = window.open(url, '_blank');
+            
+            if (newWindow) {
+                // Aguardar um pouco e então sugerir Ctrl+S
+                setTimeout(() => {
+                    alert('Arquivo aberto em nova aba!\n\nUse Ctrl+S (ou Cmd+S no Mac) para salvar onde desejar.');
+                }, 500);
+            } else {
+                // Fallback: download direto
+                const a = document.createElement('a');
+                a.href = url;
+                
+                const patientNameClean = (patientData.name || 'Paciente').replace(/[^a-zA-Z0-9]/g, '_');
+                const dateStr = new Date().toISOString().split('T')[0];
+                a.download = `Ficha_Anestesica_${patientNameClean}_${dateStr}.html`;
+                
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            }
+            
+            // Liberar URL após um tempo
+            setTimeout(() => URL.revokeObjectURL(url), 5000);
+        }
+
+        function generateFichaHTMLWithChart(chartImageData) {
+            const hours = Math.floor(elapsedSeconds / 3600);
+            const minutes = Math.floor((elapsedSeconds % 3600) / 60);
+            const duration = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`;
+            
+            // Tempo cirúrgico
+            let surgeryDuration = 'Não iniciado';
+            if (isSurgeryActive || surgeryElapsedSeconds > 0) {
+                const surgHours = Math.floor(surgeryElapsedSeconds / 3600);
+                const surgMinutes = Math.floor((surgeryElapsedSeconds % 3600) / 60);
+                surgeryDuration = `${String(surgHours).padStart(2, '0')}:${String(surgMinutes).padStart(2, '0')}`;
+            }
+            
+            let html = `<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Anestésica - ${patientData.name || 'Paciente'}</title>
+    <style>
+        @media print {
+            .page-break { page-break-before: always; }
+        }
+        body { font-family: Arial, sans-serif; max-width: 900px; margin: 20px auto; padding: 20px; background: #f5f5f5; }
+        .container { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        h1 { color: #2c3e50; text-align: center; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #3498db; margin-top: 25px; border-bottom: 2px solid #ecf0f1; padding-bottom: 5px; }
+        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0; }
+        .info-item { padding: 10px; background: #f8f9fa; border-radius: 5px; }
+        .info-item strong { color: #2c3e50; display: block; margin-bottom: 5px; }
+        .medication { background: #e8f8f5; padding: 10px; margin: 10px 0; border-left: 4px solid #1abc9c; border-radius: 4px; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background: #3498db; color: white; }
+        .obs { background: #fff3cd; padding: 15px; border-left: 4px solid #ffc107; border-radius: 4px; margin: 15px 0; white-space: pre-wrap; }
+        .footer { text-align: center; margin-top: 30px; padding-top: 20px; border-top: 2px solid #ecf0f1; color: #7f8c8d; font-size: 12px; }
+        .time-highlight { background: #e8f8f5; padding: 10px; border-left: 4px solid #f39c12; border-radius: 4px; margin: 10px 0; }
+        .chart-image { width: 100%; max-width: 100%; border: 2px solid #2c3e50; border-radius: 5px; margin: 20px 0; }
+        .legend { display: flex; flex-wrap: wrap; gap: 15px; padding: 10px; background: #f8f9fa; border-radius: 5px; margin-top: 10px; }
+        .legend-item { display: flex; align-items: center; gap: 8px; font-size: 12px; }
+        .legend-symbol { font-size: 16px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FICHA ANESTÉSICA VETERINÁRIA</h1>
+        <p style="text-align: center; color: #e74c3c; font-weight: bold;">FICHA #${currentFicha}</p>
+        
+        <h2>IDENTIFICAÇÃO DO PACIENTE</h2>
+        <div class="info-grid">
+            <div class="info-item"><strong>Paciente:</strong> ${patientData.name || 'Não informado'}</div>
+            <div class="info-item"><strong>Tutor:</strong> ${patientData.tutor || 'Não informado'}</div>
+            <div class="info-item"><strong>Espécie:</strong> ${patientData.species || 'Não informado'}</div>
+            <div class="info-item"><strong>Raça:</strong> ${patientData.breed || 'Não informado'}</div>
+            <div class="info-item"><strong>Peso:</strong> ${patientData.weight || 'Não informado'} kg</div>
+            <div class="info-item"><strong>Idade:</strong> ${patientData.age || 'Não informado'}</div>
+            <div class="info-item"><strong>ASA:</strong> ${patientData.asaClass || 'Não informado'}</div>
+        </div>
+        
+        ${patientData.comorbidities ? `<div class="info-item"><strong>Comorbidades:</strong> ${patientData.comorbidities}</div>` : ''}
+        
+        <h2>PROCEDIMENTO</h2>
+        <div class="info-grid">
+            <div class="info-item"><strong>Cirurgia:</strong> ${patientData.surgery || 'Não informado'}</div>
+            <div class="info-item"><strong>Veterinário Responsável:</strong> ${patientData.vetResponsible || 'Não informado'}</div>
+            <div class="info-item"><strong>Cirurgião:</strong> ${patientData.surgeon || 'Não informado'}</div>
+            <div class="info-item"><strong>Anestesista:</strong> ${patientData.anesthetist || 'Não informado'}</div>
+        </div>
+        
+        <h2>TEMPOS</h2>
+        <div class="time-highlight">
+            <strong>⏱️ Tempo Anestésico Total:</strong> ${duration}
+        </div>
+        <div class="time-highlight" style="border-left-color: #f39c12;">
+            <strong>⚕️ Tempo Cirúrgico:</strong> ${surgeryDuration}
+        </div>
+`;
+
+            // MPA
+            const mpaData = getMedicationsFromList('mpa');
+            if (mpaData.length > 0) {
+                html += `<h2>MEDICAÇÃO PRÉ-ANESTÉSICA</h2>`;
+                mpaData.forEach(med => {
+                    html += `<div class="medication">
+                        <strong>${med.medication}</strong> - ${med.dose} (${med.via}) 
+                        ${med.time ? `às ${med.time}` : ''}
+                    </div>`;
+                });
+            }
+            
+            // Protocolo
+            const protocolData = getMedicationsFromList('protocol');
+            if (protocolData.length > 0) {
+                html += `<h2>PROTOCOLO ANESTÉSICO</h2>`;
+                protocolData.forEach(med => {
+                    html += `<div class="medication">
+                        <strong>${med.medication}</strong> - ${med.dose} (${med.via})
+                        ${med.time ? `às ${med.time}` : ''}
+                    </div>`;
+                });
+            }
+            
+            // Monitoramento - Tabela de Resumo
+            html += `<h2>MONITORAMENTO TRANSANESTÉSICO - RESUMO</h2>`;
+            html += `<table><thead><tr><th>Parâmetro</th><th>Mínimo</th><th>Máximo</th><th>Média</th></tr></thead><tbody>`;
+            
+            Object.keys(dataPoints).forEach(paramKey => {
+                const param = parameters[paramKey];
+                const points = dataPoints[paramKey];
+                
+                if (points.length > 0 && param.numeric && !param.isEvent) {
+                    const values = points.map(p => p.value);
+                    const min = Math.min(...values);
+                    const max = Math.max(...values);
+                    const avg = (values.reduce((a, b) => a + b, 0) / values.length).toFixed(1);
+                    
+                    html += `<tr>
+                        <td>${param.name}</td>
+                        <td>${min} ${param.unit}</td>
+                        <td>${max} ${param.unit}</td>
+                        <td>${avg} ${param.unit}</td>
+                    </tr>`;
+                }
+            });
+            
+            html += `</tbody></table>`;
+            
+            // Eventos
+            const hasHypotension = dataPoints.hypotension_event && dataPoints.hypotension_event.length > 0;
+            const hasEmergency = dataPoints.emergency_event && dataPoints.emergency_event.length > 0;
+            
+            if (hasHypotension || hasEmergency) {
+                html += `<h2>EVENTOS REGISTRADOS</h2>`;
+                if (hasHypotension) {
+                    html += `<div class="medication" style="background: #fff3cd; border-left-color: #f39c12;">
+                        <strong>🩸 Hipotensão</strong> - ${dataPoints.hypotension_event.length} ocorrência(s)
+                    </div>`;
+                }
+                if (hasEmergency) {
+                    html += `<div class="medication" style="background: #f8d7da; border-left-color: #e74c3c;">
+                        <strong>🚨 Emergência</strong> - ${dataPoints.emergency_event.length} ocorrência(s)
+                    </div>`;
+                }
+            }
+            
+            // Observações
+            const obs = document.getElementById('observations').value;
+            if (obs) {
+                html += `<h2>OBSERVAÇÕES E INTERCORRÊNCIAS</h2>`;
+                html += `<div class="obs">${obs.replace(/\n/g, '<br>')}</div>`;
+            }
+            
+            html += `
+        <div class="footer">
+            Relatório gerado em ${new Date().toLocaleString('pt-BR')}<br>
+            Sistema: Ficha Anestésica Veterinária
+        </div>
+    </div>
+
+    <!-- PÁGINA 2: GRÁFICO DE MONITORAMENTO -->
+    <div class="page-break"></div>
+    
+    <div class="container">
+        <h1>GRÁFICO DE MONITORAMENTO TRANSANESTÉSICO</h1>
+        <p style="text-align: center; color: #7f8c8d; margin-bottom: 20px;">
+            Paciente: <strong>${patientData.name || 'Não informado'}</strong> | 
+            Ficha #${currentFicha}
+        </p>
+        
+        <img src="${chartImageData}" alt="Gráfico de Monitoramento Anestésico" class="chart-image">
+        
+        <h2>LEGENDA</h2>
+        <div class="legend">
+            <div class="legend-item">
+                <span class="legend-symbol" style="color: #e74c3c;">♥</span>
+                <span>FC (bpm): 0-200</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-symbol" style="color: #3498db;">🫁</span>
+                <span>FR (mpm): 0-60</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-symbol" style="color: #f39c12;">🌡️</span>
+                <span>TEMP (°C): 35-40</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-symbol" style="color: #9b59b6;">⊕</span>
+                <span>PA (mmHg): 0-200</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-symbol" style="color: #1abc9c;">◆</span>
+                <span>SpO2 (%): 80-100</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-symbol" style="color: #e67e22;">⏱</span>
+                <span>TPC (seg): 1-3</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-symbol" style="color: #34495e;">≡</span>
+                <span>Plano: I-IV</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-symbol" style="color: #16a085;">👁+</span>
+                <span>Palpebral Presente</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-symbol" style="color: #95a5a6;">👁-</span>
+                <span>Palpebral Ausente</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-symbol" style="color: #27ae60;">◉+</span>
+                <span>Corneal Presente</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-symbol" style="color: #7f8c8d;">◉-</span>
+                <span>Corneal Ausente</span>
+            </div>
+        </div>
+        
+        <div class="footer">
+            Relatório gerado em ${new Date().toLocaleString('pt-BR')}<br>
+            Sistema: Ficha Anestésica Veterinária
+        </div>
+    </div>
+</body>
+</html>`;
+            
+            return html;
+        }
+
+        function printSheet() {
+            window.print();
+        }
+
+        function finishAnesthesia() {
+            if (confirm('Deseja finalizar a anestesia?')) {
+                clearInterval(timerInterval);
+                isAnesthesiaFinished = true;
+                
+                // Parar cronômetro cirúrgico se estiver ativo
+                if (isSurgeryActive && !isSurgeryPaused) {
+                    clearInterval(surgeryTimerInterval);
+                    
+                    // Registrar intervalo final se cirurgia estava rodando
+                    if (currentSurgeryStart !== null) {
+                        const currentTime = Math.floor(elapsedSeconds / 60);
+                        surgeryIntervals.push({
+                            start: currentSurgeryStart,
+                            end: currentTime
+                        });
+                        currentSurgeryStart = null;
+                    }
+                }
+                
+                // Mostrar overlay de finalização
+                document.getElementById('finishedOverlay').classList.add('active');
+                
+                // Mostrar botão de retomar
+                document.getElementById('resumeBtn').style.display = 'block';
+            }
+        }
+
+        function closeFinishedOverlay() {
+            document.getElementById('finishedOverlay').classList.remove('active');
+        }
+
+        function resumeAnesthesia() {
+            if (confirm('Deseja retomar a anestesia? Os cronômetros continuarão de onde pararam.')) {
+                isAnesthesiaFinished = false;
+                
+                // Retomar cronômetro de anestesia
+                timerInterval = setInterval(updateTimer, 1000);
+                
+                // Retomar cronômetro cirúrgico se estava ativo e não pausado
+                if (isSurgeryActive && !isSurgeryPaused) {
+                    surgeryTimerInterval = setInterval(updateSurgeryTimer, 1000);
+                }
+                
+                // Esconder botão de retomar
+                document.getElementById('resumeBtn').style.display = 'none';
+                
+                alert('Anestesia retomada!');
+            }
+        }
+
+        function startSurgery() {
+            const btn = document.getElementById('startSurgeryBtn');
+            
+            if (!isSurgeryActive) {
+                // Primeira vez - iniciar cirurgia
+                surgeryStartTime = new Date();
+                surgeryElapsedSeconds = 0;
+                isSurgeryActive = true;
+                isSurgeryPaused = false;
+                
+                // Registrar início do primeiro intervalo (em minutos de anestesia)
+                currentSurgeryStart = Math.floor(elapsedSeconds / 60);
+                
+                // Mostrar cronômetro cirúrgico
+                document.getElementById('surgeryTimer').classList.add('active');
+                
+                // Atualizar botão
+                btn.textContent = '⏸️ Pausar Cirurgia';
+                btn.classList.remove('paused');
+                
+                // Iniciar cronômetro
+                surgeryTimerInterval = setInterval(updateSurgeryTimer, 1000);
+                
+                // Redesenhar gráfico para mostrar máscara
+                drawChart();
+            } else {
+                // Já está ativa - alternar entre pause e play
+                if (isSurgeryPaused) {
+                    // Retomar cirurgia
+                    isSurgeryPaused = false;
+                    
+                    // Registrar início de novo intervalo
+                    currentSurgeryStart = Math.floor(elapsedSeconds / 60);
+                    
+                    // Atualizar botão
+                    btn.textContent = '⏸️ Pausar Cirurgia';
+                    btn.classList.remove('paused');
+                    
+                    // Retomar cronômetro
+                    surgeryTimerInterval = setInterval(updateSurgeryTimer, 1000);
+                    
+                    // Redesenhar gráfico
+                    drawChart();
+                } else {
+                    // Pausar cirurgia
+                    isSurgeryPaused = true;
+                    
+                    // Registrar fim do intervalo atual
+                    const currentTime = Math.floor(elapsedSeconds / 60);
+                    surgeryIntervals.push({
+                        start: currentSurgeryStart,
+                        end: currentTime
+                    });
+                    currentSurgeryStart = null;
+                    
+                    // Atualizar botão
+                    btn.textContent = '▶️ Retomar Cirurgia';
+                    btn.classList.add('paused');
+                    
+                    // Parar cronômetro
+                    clearInterval(surgeryTimerInterval);
+                    
+                    // Redesenhar gráfico
+                    drawChart();
+                }
+            }
+        }
+
+        function updateSurgeryTimer() {
+            surgeryElapsedSeconds++;
+            
+            const hours = Math.floor(surgeryElapsedSeconds / 3600);
+            const minutes = Math.floor((surgeryElapsedSeconds % 3600) / 60);
+            const seconds = surgeryElapsedSeconds % 60;
+
+            const display = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            document.getElementById('surgeryTimerDisplay').textContent = display;
+        }
+
+        window.addEventListener('resize', () => {
+            if (canvas && document.getElementById('monitoringScreen').classList.contains('active')) {
+                const container = canvas.parentElement;
+                canvas.width = container.clientWidth;
+                canvas.height = container.clientHeight;
+                chartConfig.width = canvas.width;
+                chartConfig.height = canvas.height;
+                drawChart();
+            }
+        });
+
+        // ===== GERENCIAMENTO DE PROTOCOLOS =====
+
+        function loadProtocols() {
+            const stored = localStorage.getItem('anesthesiaProtocols');
+            if (stored) {
+                savedProtocols = JSON.parse(stored);
+            }
+        }
+
+        function saveProtocolsToStorage() {
+            localStorage.setItem('anesthesiaProtocols', JSON.stringify(savedProtocols));
+        }
+
+        function renderProtocolButtons() {
+            const container = document.getElementById('protocolButtons');
+            container.innerHTML = '';
+
+            savedProtocols.forEach((protocol, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'protocol-quick-btn';
+                btn.textContent = protocol.name;
+                btn.onclick = () => applyProtocol(index);
+                container.appendChild(btn);
+            });
+        }
+
+        function openProtocolManager() {
+            const modal = document.getElementById('protocolModal');
+            const listContainer = document.getElementById('protocolListModal');
+            
+            listContainer.innerHTML = '';
+
+            if (savedProtocols.length === 0) {
+                listContainer.innerHTML = '<p style="text-align: center; color: #999; padding: 20px;">Nenhum protocolo salvo ainda.</p>';
+            } else {
+                savedProtocols.forEach((protocol, index) => {
+                    const div = document.createElement('div');
+                    div.className = 'protocol-item';
+                    div.innerHTML = `
+                        <div class="protocol-item-header">
+                            <div class="protocol-name">${protocol.name}</div>
+                            <div style="display: flex; gap: 10px;">
+                                <button class="btn btn-primary" onclick="editProtocol(${index})">✏️ Editar</button>
+                                <button class="btn btn-danger" onclick="deleteProtocol(${index})">🗑️ Excluir</button>
+                            </div>
+                        </div>
+                        <div style="margin-top: 10px;">
+                            <strong>MPA:</strong> ${protocol.mpa.length} medicação(ões)<br>
+                            <strong>Anestesia:</strong> ${protocol.anesthesia.length} medicação(ões)
+                        </div>
+                    `;
+                    listContainer.appendChild(div);
+                });
+            }
+
+            modal.style.display = 'block';
+        }
+
+        function closeProtocolManager() {
+            document.getElementById('protocolModal').style.display = 'none';
+        }
+
+        function createNewProtocol() {
+            currentEditingProtocol = null;
+            protocolMedications = { mpa: [], anesthesia: [] };
+            
+            document.getElementById('protocolEditTitle').textContent = 'Novo Protocolo';
+            document.getElementById('protocolNameInput').value = '';
+            document.getElementById('protocolMPAList').innerHTML = '';
+            document.getElementById('protocolAnesthesiaList').innerHTML = '';
+            
+            document.getElementById('protocolEditModal').style.display = 'block';
+        }
+
+        function editProtocol(index) {
+            currentEditingProtocol = index;
+            const protocol = savedProtocols[index];
+            
+            document.getElementById('protocolEditTitle').textContent = 'Editar Protocolo';
+            document.getElementById('protocolNameInput').value = protocol.name;
+            
+            protocolMedications = JSON.parse(JSON.stringify(protocol));
+            
+            renderProtocolMedications();
+            
+            closeProtocolManager();
+            document.getElementById('protocolEditModal').style.display = 'block';
+        }
+
+        function renderProtocolMedications() {
+            const mpaContainer = document.getElementById('protocolMPAList');
+            const anesthesiaContainer = document.getElementById('protocolAnesthesiaList');
+            
+            mpaContainer.innerHTML = '';
+            anesthesiaContainer.innerHTML = '';
+            
+            protocolMedications.mpa.forEach((med, index) => {
+                mpaContainer.appendChild(createProtocolMedicationElement('mpa', med, index));
+            });
+            
+            protocolMedications.anesthesia.forEach((med, index) => {
+                anesthesiaContainer.appendChild(createProtocolMedicationElement('anesthesia', med, index));
+            });
+        }
+
+        function createProtocolMedicationElement(type, med, index) {
+            const div = document.createElement('div');
+            div.className = 'medication-entry';
+            div.innerHTML = `
+                <div class="form-group">
+                    <label>Medicação:</label>
+                    <input type="text" value="${med.medication || ''}" onchange="updateProtocolMed('${type}', ${index}, 'medication', this.value)">
+                </div>
+                <div class="form-group">
+                    <label>Dose:</label>
+                    <input type="text" value="${med.dose || ''}" onchange="updateProtocolMed('${type}', ${index}, 'dose', this.value)">
+                </div>
+                <div class="form-group">
+                    <label>Via:</label>
+                    <select onchange="updateProtocolMed('${type}', ${index}, 'via', this.value)">
+                        <option value="IV" ${med.via === 'IV' ? 'selected' : ''}>IV</option>
+                        <option value="IM" ${med.via === 'IM' ? 'selected' : ''}>IM</option>
+                        <option value="SC" ${med.via === 'SC' ? 'selected' : ''}>SC</option>
+                        <option value="VO" ${med.via === 'VO' ? 'selected' : ''}>VO</option>
+                        <option value="Inalatória" ${med.via === 'Inalatória' ? 'selected' : ''}>Inalatória</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Horário:</label>
+                    <input type="time" value="${med.time || ''}" onchange="updateProtocolMed('${type}', ${index}, 'time', this.value)">
+                </div>
+                <button class="btn btn-danger" onclick="removeProtocolMedication('${type}', ${index})">✕</button>
+            `;
+            return div;
+        }
+
+        function addProtocolMedication(type) {
+            if (!protocolMedications[type]) {
+                protocolMedications[type] = [];
+            }
+            
+            protocolMedications[type].push({
+                medication: '',
+                dose: '',
+                via: 'IV',
+                time: ''
+            });
+            
+            renderProtocolMedications();
+        }
+
+        function updateProtocolMed(type, index, field, value) {
+            protocolMedications[type][index][field] = value;
+        }
+
+        function removeProtocolMedication(type, index) {
+            protocolMedications[type].splice(index, 1);
+            renderProtocolMedications();
+        }
+
+        function saveProtocol() {
+            const name = document.getElementById('protocolNameInput').value.trim();
+            
+            if (!name) {
+                alert('Digite um nome para o protocolo!');
+                return;
+            }
+            
+            const protocol = {
+                name: name,
+                mpa: protocolMedications.mpa,
+                anesthesia: protocolMedications.anesthesia
+            };
+            
+            if (currentEditingProtocol !== null) {
+                savedProtocols[currentEditingProtocol] = protocol;
+            } else {
+                savedProtocols.push(protocol);
+            }
+            
+            saveProtocolsToStorage();
+            renderProtocolButtons();
+            closeProtocolEdit();
+            
+            alert('Protocolo salvo com sucesso!');
+        }
+
+        function deleteProtocol(index) {
+            if (confirm(`Deseja realmente excluir o protocolo "${savedProtocols[index].name}"?`)) {
+                savedProtocols.splice(index, 1);
+                saveProtocolsToStorage();
+                renderProtocolButtons();
+                openProtocolManager();
+            }
+        }
+
+        function closeProtocolEdit() {
+            document.getElementById('protocolEditModal').style.display = 'none';
+        }
+
+        function applyProtocol(index) {
+            const protocol = savedProtocols[index];
+            
+            if (!confirm(`Aplicar o protocolo "${protocol.name}"?\n\nIsso irá substituir as medicações atuais.`)) {
+                return;
+            }
+            
+            document.getElementById('mpaList').innerHTML = '';
+            document.getElementById('protocolList').innerHTML = '';
+            medications = { mpa: [], protocol: [] };
+            
+            protocol.mpa.forEach(med => {
+                const div = createMedicationEntryFromProtocol('mpa', med);
+                document.getElementById('mpaList').appendChild(div);
+                medications.mpa.push(div);
+            });
+            
+            protocol.anesthesia.forEach(med => {
+                const div = createMedicationEntryFromProtocol('protocol', med);
+                document.getElementById('protocolList').appendChild(div);
+                medications.protocol.push(div);
+            });
+            
+            alert(`Protocolo "${protocol.name}" aplicado com sucesso!`);
+        }
+
+        function createMedicationEntryFromProtocol(type, med) {
+            const div = document.createElement('div');
+            div.className = 'medication-entry';
+            div.innerHTML = `
+                <div class="form-group">
+                    <label>Medicação:</label>
+                    <input type="text" value="${med.medication || ''}" placeholder="Nome da medicação">
+                </div>
+                <div class="form-group">
+                    <label>Dose:</label>
+                    <input type="text" value="${med.dose || ''}" placeholder="Ex: 0.5 mg/kg">
+                </div>
+                <div class="form-group">
+                    <label>Via:</label>
+                    <select>
+                        <option value="IV" ${med.via === 'IV' ? 'selected' : ''}>IV</option>
+                        <option value="IM" ${med.via === 'IM' ? 'selected' : ''}>IM</option>
+                        <option value="SC" ${med.via === 'SC' ? 'selected' : ''}>SC</option>
+                        <option value="VO" ${med.via === 'VO' ? 'selected' : ''}>VO</option>
+                        <option value="Inalatória" ${med.via === 'Inalatória' ? 'selected' : ''}>Inalatória</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Horário:</label>
+                    <input type="time" value="${med.time || ''}">
+                </div>
+                <button class="btn btn-danger" onclick="removeMedication('${type}', this)">✕</button>
+            `;
+            return div;
+        }
+
+        // ===== PROTOCOLOS DE EMERGÊNCIA =====
+
+        function loadEmergencyProtocols() {
+            const stored = localStorage.getItem('emergencyProtocols');
+            if (stored) {
+                emergencyProtocols = JSON.parse(stored);
+                if (!emergencyProtocols.fluidBolus) {
+                    emergencyProtocols.fluidBolus = 10;
+                }
+            } else {
+                emergencyProtocols = {
+                    fluidBolus: 10,
+                    hypotension: [
+                        { medication: 'Efedrina', dose: '0.1', unit: 'mg/kg', via: 'IV' },
+                        { medication: 'Dopamina', dose: '5', unit: 'mcg/kg/min', via: 'IV' }
+                    ],
+                    cardiac: [
+                        { medication: 'Adrenalina', dose: '0.01', unit: 'mg/kg', via: 'IV' },
+                        { medication: 'Atropina', dose: '0.04', unit: 'mg/kg', via: 'IV' }
+                    ]
+                };
+                saveEmergencyProtocols();
+            }
+        }
+
+        function saveEmergencyProtocols() {
+            const fluidBolus = parseFloat(document.getElementById('fluidBolusDose').value);
+            emergencyProtocols.fluidBolus = fluidBolus > 0 ? fluidBolus : 10;
+            
+            localStorage.setItem('emergencyProtocols', JSON.stringify(emergencyProtocols));
+            alert('Protocolos de emergência salvos com sucesso!');
+        }
+
+        function openEmergencyProtocolManager() {
+            renderEmergencyProtocolsForEdit();
+            document.getElementById('fluidBolusDose').value = emergencyProtocols.fluidBolus || 10;
+            document.getElementById('emergencyProtocolModal').style.display = 'block';
+        }
+
+        function closeEmergencyProtocolManager() {
+            document.getElementById('emergencyProtocolModal').style.display = 'none';
+        }
+
+        function renderEmergencyProtocolsForEdit() {
+            const hypotensionContainer = document.getElementById('hypotensionProtocolList');
+            const cardiacContainer = document.getElementById('cardiacProtocolList');
+            
+            hypotensionContainer.innerHTML = '';
+            cardiacContainer.innerHTML = '';
+            
+            emergencyProtocols.hypotension.forEach((med, index) => {
+                hypotensionContainer.appendChild(createEmergencyMedicationElement('hypotension', med, index));
+            });
+            
+            emergencyProtocols.cardiac.forEach((med, index) => {
+                cardiacContainer.appendChild(createEmergencyMedicationElement('cardiac', med, index));
+            });
+        }
+
+        function createEmergencyMedicationElement(type, med, index) {
+            const div = document.createElement('div');
+            div.className = 'emergency-med-entry';
+            div.innerHTML = `
+                <div class="form-group">
+                    <label>Medicação:</label>
+                    <input type="text" value="${med.medication || ''}" onchange="updateEmergencyMed('${type}', ${index}, 'medication', this.value)" placeholder="Nome da medicação">
+                </div>
+                <div class="form-group">
+                    <label>Dose (ex: 0.1 mg/kg):</label>
+                    <input type="text" value="${med.dose || ''}" onchange="updateEmergencyMed('${type}', ${index}, 'dose', this.value)" placeholder="0.1">
+                </div>
+                <div class="form-group">
+                    <label>Unidade:</label>
+                    <select onchange="updateEmergencyMed('${type}', ${index}, 'unit', this.value)">
+                        <option value="mg/kg" ${med.unit === 'mg/kg' ? 'selected' : ''}>mg/kg</option>
+                        <option value="mcg/kg" ${med.unit === 'mcg/kg' ? 'selected' : ''}>mcg/kg</option>
+                        <option value="ml/kg" ${med.unit === 'ml/kg' ? 'selected' : ''}>ml/kg</option>
+                        <option value="mcg/kg/min" ${med.unit === 'mcg/kg/min' ? 'selected' : ''}>mcg/kg/min</option>
+                        <option value="mg total" ${med.unit === 'mg total' ? 'selected' : ''}>mg total</option>
+                        <option value="ml total" ${med.unit === 'ml total' ? 'selected' : ''}>ml total</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Via:</label>
+                    <select onchange="updateEmergencyMed('${type}', ${index}, 'via', this.value)">
+                        <option value="IV" ${med.via === 'IV' ? 'selected' : ''}>IV</option>
+                        <option value="IM" ${med.via === 'IM' ? 'selected' : ''}>IM</option>
+                        <option value="IC" ${med.via === 'IC' ? 'selected' : ''}>IC</option>
+                        <option value="IT" ${med.via === 'IT' ? 'selected' : ''}>IT</option>
+                    </select>
+                </div>
+                <button class="btn btn-danger" onclick="removeEmergencyMedication('${type}', ${index})">✕</button>
+            `;
+            return div;
+        }
+
+        function addEmergencyMedication(type) {
+            emergencyProtocols[type].push({
+                medication: '',
+                dose: '',
+                unit: 'mg/kg',
+                via: 'IV'
+            });
+            renderEmergencyProtocolsForEdit();
+        }
+
+        function updateEmergencyMed(type, index, field, value) {
+            emergencyProtocols[type][index][field] = value;
+        }
+
+        function removeEmergencyMedication(type, index) {
+            emergencyProtocols[type].splice(index, 1);
+            renderEmergencyProtocolsForEdit();
+        }
+
+        function showHypotensionProtocol() {
+            const weight = parseFloat(patientData.weight);
+            
+            if (!weight || weight <= 0) {
+                alert('Peso do paciente não informado ou inválido!');
+                return;
+            }
+            
+            // Adicionar marcador no gráfico
+            addEventMarker('hypotension_event');
+            
+            // RESET COMPLETO - começar do zero
+            resetHypotensionProtocol();
+            
+            // Abrir modal interativo
+            document.getElementById('hypoPatientName').textContent = patientData.name || 'Não informado';
+            document.getElementById('hypoPatientWeight').textContent = weight;
+            document.getElementById('hypotensionInteractiveModal').classList.add('active');
+        }
+
+        function resetHypotensionProtocol() {
+            // Parar todos os cronômetros
+            if (fluidBolusActive) {
+                clearInterval(fluidBolusInterval);
+                fluidBolusActive = false;
+            }
+            if (norepiActive) {
+                clearInterval(norepiInterval);
+                norepiActive = false;
+            }
+            
+            // Resetar variáveis
+            fluidBolusElapsed = 0;
+            norepiElapsed = 0;
+            currentNorepiCalculation = null;
+            currentDoseLevel = 1;
+            norepiProtocol = null;
+            
+            // Resetar interface - Prova de Carga
+            document.getElementById('fluidBolusResult').classList.remove('active');
+            document.getElementById('fluidBolusResult').innerHTML = '';
+            
+            document.getElementById('fluidTimer').classList.remove('active');
+            document.getElementById('fluidTimerDisplay').textContent = '00:00';
+            
+            // Resetar interface - Norepinefrina
+            document.getElementById('norepinephrineResult').classList.remove('active');
+            document.getElementById('norepinephrineResult').innerHTML = '';
+            
+            document.getElementById('norepiTimer').classList.remove('active');
+            document.getElementById('norepiTimerDisplay').textContent = '00:00:00';
+            document.getElementById('norepiDoseLevel').textContent = 'Dose atual: Nível 1 (0,05 mcg/kg/min)';
+            document.getElementById('norepiNextIncrease').textContent = '';
+            
+            // Esconder versão minimizada
+            document.getElementById('hypotensionMinimized').classList.remove('active');
+        }
+
+        function closeHypotensionModal() {
+            // Fechar modal principal
+            document.getElementById('hypotensionInteractiveModal').classList.remove('active');
+            
+            // Se algum cronômetro estiver ativo, mostrar versão minimizada
+            if (fluidBolusActive || norepiActive) {
+                document.getElementById('hypotensionMinimized').classList.add('active');
+                updateMinimizedTimers();
+            }
+        }
+
+        function minimizeHypotensionModal() {
+            // Esconder modal principal
+            document.getElementById('hypotensionInteractiveModal').classList.remove('active');
+            
+            // Mostrar versão minimizada
+            document.getElementById('hypotensionMinimized').classList.add('active');
+            updateMinimizedTimers();
+        }
+
+        function maximizeHypotensionModal() {
+            // Mostrar modal principal
+            document.getElementById('hypotensionInteractiveModal').classList.add('active');
+            
+            // Esconder versão minimizada
+            document.getElementById('hypotensionMinimized').classList.remove('active');
+        }
+
+        function updateMinimizedTimers() {
+            let html = '';
+            
+            if (fluidBolusActive) {
+                const minutes = Math.floor(fluidBolusElapsed / 60);
+                const seconds = fluidBolusElapsed % 60;
+                const display = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+                
+                html += `
+                    <div class="minimized-timer">
+                        <div class="minimized-timer-label">💧 Prova de Carga</div>
+                        <div class="minimized-timer-value timer-fluid">${display}</div>
+                    </div>
+                `;
+            }
+            
+            if (norepiActive) {
+                const hours = Math.floor(norepiElapsed / 3600);
+                const minutes = Math.floor((norepiElapsed % 3600) / 60);
+                const seconds = norepiElapsed % 60;
+                const display = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+                
+                html += `
+                    <div class="minimized-timer">
+                        <div class="minimized-timer-label">💉 Norepinefrina</div>
+                        <div class="minimized-timer-value timer-norepi">${display}</div>
+                    </div>
+                `;
+            }
+            
+            if (!html) {
+                html = '<p style="text-align: center; color: #999; font-size: 12px;">Nenhum timer ativo</p>';
+            }
+            
+            document.getElementById('minimizedTimers').innerHTML = html;
+        }
+
+        // PROVA DE CARGA
+        function calculateFluidBolus() {
+            const weight = parseFloat(patientData.weight);
+            const volumeTotal = weight * 10; // 10 ml/kg
+            const timeMinutes = 15; // 15 minutos
+            
+            // Taxa de infusão em ml/h
+            const infusionRate = (volumeTotal / timeMinutes) * 60;
+            
+            const html = `
+                <div class="calc-item">
+                    <div class="calc-label">💧 Volume Total:</div>
+                    <div class="calc-value">${volumeTotal.toFixed(1)} ml</div>
+                    <div class="calc-info">10 ml/kg × ${weight} kg</div>
+                </div>
+                <div class="calc-item">
+                    <div class="calc-label">⏱️ Tempo de Infusão:</div>
+                    <div class="calc-value">15 minutos</div>
+                </div>
+                <div class="calc-item">
+                    <div class="calc-label">🔧 Taxa para Bomba de Infusão:</div>
+                    <div class="calc-value">${infusionRate.toFixed(1)} ml/h</div>
+                    <div class="calc-info">Programar bomba com esta taxa</div>
+                </div>
+                <div style="margin-top: 10px; padding: 10px; background: #e8f8f5; border-radius: 5px; border-left: 3px solid #1abc9c;">
+                    <strong>📌 Instruções:</strong><br>
+                    <small>
+                    • Utilizar Ringer Lactato ou SF 0,9%<br>
+                    • Programar bomba em ${infusionRate.toFixed(1)} ml/h<br>
+                    • Infundir durante 15 minutos<br>
+                    • Monitorar PA durante infusão
+                    </small>
+                </div>
+                
+                <button class="btn-start-fluid" id="startFluidBtn" onclick="toggleFluidBolus()">
+                    ▶️ Iniciar Cronômetro (15 minutos)
+                </button>
+            `;
+            
+            document.getElementById('fluidBolusResult').innerHTML = html;
+            document.getElementById('fluidBolusResult').classList.add('active');
+        }
+
+        function toggleFluidBolus() {
+            const btn = document.getElementById('startFluidBtn');
+            const timer = document.getElementById('fluidTimer');
+            
+            if (!fluidBolusActive) {
+                // Iniciar prova de carga
+                fluidBolusActive = true;
+                fluidBolusStartTime = new Date();
+                fluidBolusElapsed = 0;
+                
+                btn.textContent = '⏸️ Parar Cronômetro';
+                btn.classList.add('active');
+                timer.classList.add('active');
+                
+                // Iniciar cronômetro
+                fluidBolusInterval = setInterval(updateFluidBolusTimer, 1000);
+            } else {
+                // Parar prova de carga
+                fluidBolusActive = false;
+                clearInterval(fluidBolusInterval);
+                
+                btn.textContent = '▶️ Iniciar Cronômetro (15 minutos)';
+                btn.classList.remove('active');
+            }
+        }
+
+        function updateFluidBolusTimer() {
+            fluidBolusElapsed++;
+            
+            const minutes = Math.floor(fluidBolusElapsed / 60);
+            const seconds = fluidBolusElapsed % 60;
+            
+            const display = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            document.getElementById('fluidTimerDisplay').textContent = display;
+            
+            // Atualizar versão minimizada se estiver ativa
+            if (document.getElementById('hypotensionMinimized').classList.contains('active')) {
+                updateMinimizedTimers();
+            }
+            
+            // Alertar quando completar 15 minutos
+            if (fluidBolusElapsed === 900) { // 15 minutos
+                playBeep();
+                alert('⏰ Prova de carga completada! (15 minutos)');
+            }
+        }
+
+        // NOREPINEFRINA - SISTEMA DE ESCALONAMENTO AUTOMÁTICO
+        function calculateNorepinephrine() {
+            const weight = parseFloat(patientData.weight);
+            
+            // Doses escalonadas em mcg/kg/min
+            const doses = [0.05, 0.15, 0.25, 0.35, 0.50];
+            
+            // Calcular diluição INICIAL baseada na DOSE MÍNIMA (Nível 1)
+            const initialDosePerKgMin = doses[0]; // 0.05
+            const initialDosePerMin = initialDosePerKgMin * weight;
+            const initialDosePerHour = initialDosePerMin * 60;
+            
+            // Objetivo: ~2 ml/kg/h na dose inicial
+            const targetRatePerKg = 2;
+            const initialTargetRate = targetRatePerKg * weight;
+            
+            // Concentração para dose inicial
+            const neededConcentration = initialDosePerHour / initialTargetRate;
+            
+            // Calcular diluição - testar 250ml e 500ml
+            let diluentVolume = 250;
+            let ampVolume = (neededConcentration * diluentVolume) / (1000 - neededConcentration);
+            
+            if (ampVolume > 20) {
+                diluentVolume = 500;
+                ampVolume = (neededConcentration * diluentVolume) / (1000 - neededConcentration);
+            }
+            
+            const finalVolume = diluentVolume + ampVolume;
+            const finalConcentration = (ampVolume * 1000) / finalVolume;
+            
+            // Calcular todas as taxas de infusão para cada nível
+            const protocol = doses.map((dosePerKgMin, index) => {
+                const level = index + 1;
+                const dosePerMin = dosePerKgMin * weight;
+                const dosePerHour = dosePerMin * 60;
+                
+                // Taxa de infusão = dose desejada / concentração
+                const infusionRate = dosePerHour / finalConcentration;
+                
+                // Verificar se taxa está muito alta (> 100 ml/h para cães pequenos ou > 200 ml/h para grandes)
+                const maxReasonableRate = weight < 10 ? 100 : 200;
+                const needsNewDilution = infusionRate > maxReasonableRate;
+                
+                return {
+                    level: level,
+                    dosePerKgMin: dosePerKgMin,
+                    dosePerMin: dosePerMin,
+                    dosePerHour: dosePerHour,
+                    infusionRate: infusionRate,
+                    needsNewDilution: needsNewDilution
+                };
+            });
+            
+            // Verificar se algum nível precisa de nova diluição
+            const highestLevelWithoutNewDilution = protocol.findIndex(p => p.needsNewDilution);
+            const maxLevelCurrentDilution = highestLevelWithoutNewDilution === -1 ? 5 : highestLevelWithoutNewDilution;
+            
+            // Calcular nova diluição se necessário para níveis mais altos
+            let newDilutionProtocol = null;
+            if (maxLevelCurrentDilution < 5) {
+                // Calcular nova diluição baseada no nível que precisa
+                const targetLevel = maxLevelCurrentDilution + 1;
+                const targetDosePerKgMin = doses[targetLevel - 1];
+                const targetDosePerHour = targetDosePerKgMin * weight * 60;
+                const newTargetRate = targetRatePerKg * weight;
+                const newConcentration = targetDosePerHour / newTargetRate;
+                
+                let newDiluentVolume = 250;
+                let newAmpVolume = (newConcentration * newDiluentVolume) / (1000 - newConcentration);
+                
+                if (newAmpVolume > 20) {
+                    newDiluentVolume = 500;
+                    newAmpVolume = (newConcentration * newDiluentVolume) / (1000 - newConcentration);
+                }
+                
+                const newFinalVolume = newDiluentVolume + newAmpVolume;
+                const newFinalConcentration = (newAmpVolume * 1000) / newFinalVolume;
+                
+                // Recalcular níveis restantes com nova diluição
+                const newProtocol = doses.slice(maxLevelCurrentDilution).map((dosePerKgMin, index) => {
+                    const level = maxLevelCurrentDilution + index + 1;
+                    const dosePerHour = dosePerKgMin * weight * 60;
+                    const infusionRate = dosePerHour / newFinalConcentration;
+                    
+                    return {
+                        level: level,
+                        dosePerKgMin: dosePerKgMin,
+                        infusionRate: infusionRate
+                    };
+                });
+                
+                newDilutionProtocol = {
+                    ampVolume: newAmpVolume,
+                    diluentVolume: newDiluentVolume,
+                    finalVolume: newFinalVolume,
+                    finalConcentration: newFinalConcentration,
+                    startLevel: maxLevelCurrentDilution + 1,
+                    protocol: newProtocol
+                };
+            }
+            
+            // Armazenar protocolo completo
+            norepiProtocol = {
+                weight: weight,
+                ampVolume: ampVolume,
+                diluentVolume: diluentVolume,
+                finalVolume: finalVolume,
+                finalConcentration: finalConcentration,
+                protocol: protocol,
+                maxLevelCurrentDilution: maxLevelCurrentDilution,
+                newDilutionProtocol: newDilutionProtocol
+            };
+            
+            // Gerar HTML com protocolo completo
+            let html = `
+                <div style="background: #e8f8f5; padding: 15px; border-radius: 8px; margin-bottom: 15px; border: 2px solid #1abc9c;">
+                    <strong style="color: #16a085;">📋 PROTOCOLO DE ESCALONAMENTO AUTOMÁTICO</strong><br>
+                    <small style="color: #555;">Início sempre com dose mínima | Aumento a cada 10 minutos</small>
+                </div>
+                
+                <div class="calc-item">
+                    <div class="calc-label">📦 Preparação da Solução INICIAL:</div>
+                    <div class="calc-value">${ampVolume.toFixed(2)} ml de Norepinefrina</div>
+                    <div class="calc-info">Diluir em ${diluentVolume} ml de SF 0,9%</div>
+                </div>
+                
+                <div class="calc-item">
+                    <div class="calc-label">🧪 Volume Final:</div>
+                    <div class="calc-value">${finalVolume.toFixed(0)} ml</div>
+                    <div class="calc-info">Concentração: ${finalConcentration.toFixed(3)} mcg/ml</div>
+                </div>
+                
+                <div style="margin-top: 15px; padding: 15px; background: #fef5f5; border-radius: 5px; border-left: 3px solid #e74c3c;">
+                    <strong>📌 Instruções de Preparo:</strong><br>
+                    <small>
+                    1. Aspirar ${ampVolume.toFixed(2)} ml de Norepinefrina 1mg/ml<br>
+                    2. Adicionar em ${diluentVolume} ml de Soro Fisiológico 0,9%<br>
+                    3. Homogeneizar bem a solução<br>
+                    4. Programar bomba conforme tabela abaixo
+                    </small>
+                </div>
+                
+                <div style="margin-top: 15px; padding: 10px; background: white; border-radius: 8px; border: 2px solid #e74c3c;">
+                    <strong style="color: #e74c3c;">🔧 PROTOCOLO DE TAXAS (Diluição Inicial):</strong><br>
+                    <table style="width: 100%; margin-top: 10px; font-size: 13px;">
+                        <thead style="background: #f8f9fa;">
+                            <tr>
+                                <th style="padding: 8px; text-align: left;">Tempo</th>
+                                <th style="padding: 8px; text-align: left;">Nível</th>
+                                <th style="padding: 8px; text-align: left;">Dose</th>
+                                <th style="padding: 8px; text-align: right;"><strong>Taxa (ml/h)</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+            `;
+            
+            protocol.slice(0, maxLevelCurrentDilution).forEach((p, index) => {
+                const timeRange = index === 0 ? '0-10 min' : `${index * 10}-${(index + 1) * 10} min`;
+                const bgColor = index === 0 ? 'background: #e8f8f5;' : '';
+                html += `
+                    <tr style="${bgColor}">
+                        <td style="padding: 8px;">${timeRange}</td>
+                        <td style="padding: 8px;">Nível ${p.level}</td>
+                        <td style="padding: 8px; font-size: 11px;">${p.dosePerKgMin} mcg/kg/min</td>
+                        <td style="padding: 8px; text-align: right; font-weight: bold; color: #e74c3c;">${p.infusionRate.toFixed(1)} ml/h</td>
+                    </tr>
+                `;
+            });
+            
+            html += `
+                        </tbody>
+                    </table>
+                </div>
+            `;
+            
+            // Se precisa de nova diluição
+            if (newDilutionProtocol) {
+                html += `
+                <div style="margin-top: 15px; padding: 15px; background: #fff3cd; border-radius: 8px; border-left: 4px solid #f39c12;">
+                    <strong style="color: #e67e22;">⚠️ ATENÇÃO - NOVA DILUIÇÃO NECESSÁRIA A PARTIR DO NÍVEL ${newDilutionProtocol.startLevel}</strong><br>
+                    <small style="color: #555;">Se precisar aumentar além do Nível ${maxLevelCurrentDilution}, preparar nova solução:</small>
+                </div>
+                
+                <div class="calc-item" style="background: #fffbf0;">
+                    <div class="calc-label">📦 Nova Preparação (Níveis ${newDilutionProtocol.startLevel}-5):</div>
+                    <div class="calc-value">${newDilutionProtocol.ampVolume.toFixed(2)} ml de Norepinefrina</div>
+                    <div class="calc-info">Diluir em ${newDilutionProtocol.diluentVolume} ml de SF 0,9%</div>
+                </div>
+                
+                <div class="calc-item" style="background: #fffbf0;">
+                    <div class="calc-label">🧪 Volume Final:</div>
+                    <div class="calc-value">${newDilutionProtocol.finalVolume.toFixed(0)} ml</div>
+                    <div class="calc-info">Concentração: ${newDilutionProtocol.finalConcentration.toFixed(3)} mcg/ml</div>
+                </div>
+                
+                <div style="margin-top: 10px; padding: 10px; background: white; border-radius: 8px; border: 2px solid #f39c12;">
+                    <strong style="color: #f39c12;">🔧 PROTOCOLO (Nova Diluição):</strong><br>
+                    <table style="width: 100%; margin-top: 10px; font-size: 13px;">
+                        <thead style="background: #fffbf0;">
+                            <tr>
+                                <th style="padding: 8px; text-align: left;">Tempo</th>
+                                <th style="padding: 8px; text-align: left;">Nível</th>
+                                <th style="padding: 8px; text-align: left;">Dose</th>
+                                <th style="padding: 8px; text-align: right;"><strong>Taxa (ml/h)</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                `;
+                
+                newDilutionProtocol.protocol.forEach((p, index) => {
+                    const levelIndex = p.level - 1;
+                    const timeRange = `${levelIndex * 10}-${(levelIndex + 1) * 10} min`;
+                    html += `
+                        <tr>
+                            <td style="padding: 8px;">${timeRange}</td>
+                            <td style="padding: 8px;">Nível ${p.level}</td>
+                            <td style="padding: 8px; font-size: 11px;">${p.dosePerKgMin} mcg/kg/min</td>
+                            <td style="padding: 8px; text-align: right; font-weight: bold; color: #f39c12;">${p.infusionRate.toFixed(1)} ml/h</td>
+                        </tr>
+                    `;
+                });
+                
+                html += `
+                        </tbody>
+                    </table>
+                </div>
+                `;
+            }
+            
+            html += `
+                <div style="margin-top: 15px; padding: 10px; background: #e8f8f5; border-radius: 5px; border-left: 3px solid #1abc9c;">
+                    <strong>💡 IMPORTANTE:</strong><br>
+                    <small>
+                    • Iniciar SEMPRE em <strong>${protocol[0].infusionRate.toFixed(1)} ml/h</strong> (Nível 1)<br>
+                    • Alarme soará a cada 10 minutos<br>
+                    • Ajustar bomba para próxima taxa conforme resposta<br>
+                    ${newDilutionProtocol ? `• Se passar do Nível ${maxLevelCurrentDilution}: preparar nova solução<br>` : ''}
+                    • Monitorar PA continuamente
+                    </small>
+                </div>
+                
+                <button class="btn-start-norepi" id="startNorepiBtn" onclick="toggleNorepinephrineInfusion()">
+                    ▶️ Iniciar Infusão (Nível 1 - ${protocol[0].infusionRate.toFixed(1)} ml/h)
+                </button>
+            `;
+            
+            document.getElementById('norepinephrineResult').innerHTML = html;
+            document.getElementById('norepinephrineResult').classList.add('active');
+        }
+
+        function toggleNorepinephrineInfusion() {
+            const btn = document.getElementById('startNorepiBtn');
+            const timer = document.getElementById('norepiTimer');
+            
+            if (!norepiActive) {
+                // Iniciar infusão sempre no nível 1
+                norepiActive = true;
+                norepiStartTime = new Date();
+                norepiElapsed = 0;
+                currentDoseLevel = 1;
+                
+                btn.textContent = '⏸️ Parar Infusão de Norepinefrina';
+                btn.classList.add('active');
+                timer.classList.add('active');
+                
+                updateDoseLevelDisplay();
+                
+                // Iniciar cronômetro
+                norepiInterval = setInterval(updateNorepiTimer, 1000);
+            } else {
+                // Parar infusão
+                norepiActive = false;
+                clearInterval(norepiInterval);
+                
+                btn.textContent = '▶️ Iniciar Infusão';
+                btn.classList.remove('active');
+            }
+        }
+
+        function updateNorepiTimer() {
+            norepiElapsed++;
+            
+            const hours = Math.floor(norepiElapsed / 3600);
+            const minutes = Math.floor((norepiElapsed % 3600) / 60);
+            const seconds = norepiElapsed % 60;
+            
+            const display = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            document.getElementById('norepiTimerDisplay').textContent = display;
+            
+            // Verificar se deve aumentar dose (a cada 10 minutos = 600 segundos)
+            const totalMinutes = Math.floor(norepiElapsed / 60);
+            
+            // A cada 10 minutos, aumentar nível (mas não passar do nível 5)
+            if (norepiElapsed % 600 === 0 && norepiElapsed > 0 && currentDoseLevel < 5) {
+                currentDoseLevel++;
+                showDoseIncreaseAlert();
+                updateDoseLevelDisplay();
+            }
+            
+            // Mostrar próximo aumento
+            const minutesInCurrentLevel = totalMinutes % 10;
+            const minutesToNextIncrease = 10 - minutesInCurrentLevel;
+            
+            if (currentDoseLevel < 5 && minutesToNextIncrease > 0) {
+                document.getElementById('norepiNextIncrease').textContent = 
+                    `⏰ Próximo aumento em ${minutesToNextIncrease} minutos`;
+            } else if (currentDoseLevel === 5) {
+                document.getElementById('norepiNextIncrease').textContent = 
+                    '✓ Dose máxima atingida';
+            }
+            
+            // Atualizar versão minimizada se estiver ativa
+            if (document.getElementById('hypotensionMinimized').classList.contains('active')) {
+                updateMinimizedTimers();
+            }
+        }
+
+        function updateDoseLevelDisplay() {
+            if (!norepiProtocol) return;
+            
+            const currentProtocol = norepiProtocol.protocol[currentDoseLevel - 1];
+            
+            document.getElementById('norepiDoseLevel').innerHTML = 
+                `Dose atual: <strong>Nível ${currentDoseLevel}</strong> (${currentProtocol.dosePerKgMin} mcg/kg/min)<br>` +
+                `Taxa: <strong style="color: #e74c3c; font-size: 16px;">${currentProtocol.infusionRate.toFixed(1)} ml/h</strong>`;
+        }
+
+        function showDoseIncreaseAlert() {
+            if (!norepiProtocol) return;
+            
+            // Verificar se está no limite da diluição atual
+            if (currentDoseLevel > norepiProtocol.maxLevelCurrentDilution) {
+                // Precisa trocar diluição
+                const newDil = norepiProtocol.newDilutionProtocol;
+                const newProtocol = newDil.protocol.find(p => p.level === currentDoseLevel);
+                
+                playBeep();
+                
+                alert(
+                    `🔔 ATENÇÃO - TROCAR DILUIÇÃO\n\n` +
+                    `Para Nível ${currentDoseLevel} é necessário NOVA SOLUÇÃO\n\n` +
+                    `NOVA PREPARAÇÃO:\n` +
+                    `• ${newDil.ampVolume.toFixed(2)} ml de Norepinefrina\n` +
+                    `• Diluir em ${newDil.diluentVolume} ml de SF 0,9%\n` +
+                    `• Volume final: ${newDil.finalVolume.toFixed(0)} ml\n\n` +
+                    `NOVA TAXA DA BOMBA:\n` +
+                    `${newProtocol.infusionRate.toFixed(1)} ml/h\n\n` +
+                    `Preparar nova solução antes de aumentar dose`
+                );
+                return;
+            }
+            
+            const currentProtocol = norepiProtocol.protocol[currentDoseLevel - 1];
+            
+            // Tocar alarme
+            playBeep();
+            
+            // Mostrar alerta
+            alert(
+                `🔔 AUMENTAR DOSE DE NOREPINEFRINA\n\n` +
+                `Nível ${currentDoseLevel} de 5\n` +
+                `Dose: ${currentProtocol.dosePerKgMin} mcg/kg/min\n\n` +
+                `NOVA TAXA DA BOMBA:\n` +
+                `${currentProtocol.infusionRate.toFixed(1)} ml/h\n\n` +
+                `Monitorar resposta hemodinâmica`
+            );
+        }
+
+        function showEmergencyProtocol() {
+            const weight = parseFloat(patientData.weight);
+            
+            if (!weight || weight <= 0) {
+                alert('Peso do paciente não informado ou inválido!');
+                return;
+            }
+            
+            addEventMarker('emergency_event');
+            
+            displayEmergencyProtocol('cardiac', 'PROTOCOLO DE EMERGÊNCIA - PARADA CARDÍACA', weight);
+        }
+
+        function addEventMarker(eventType) {
+            const currentMinutes = Math.floor(elapsedSeconds / 60);
+            const time = Math.round(currentMinutes / 10) * 10;
+            
+            if (!dataPoints[eventType]) {
+                dataPoints[eventType] = [];
+            }
+            
+            dataPoints[eventType].push({ time, value: 0 });
+            dataPoints[eventType].sort((a, b) => a.time - b.time);
+            
+            drawChart();
+        }
+
+        function displayEmergencyProtocol(type, title, weight) {
+            const modal = document.getElementById('emergencyDisplayModal');
+            const titleEl = document.getElementById('emergencyDisplayTitle');
+            const contentEl = document.getElementById('emergencyDisplayContent');
+            
+            titleEl.textContent = title;
+            titleEl.style.color = type === 'hypotension' ? '#f39c12' : '#e74c3c';
+            
+            let html = `
+                <div class="emergency-protocol-display ${type === 'hypotension' ? 'hypotension' : 'cardiac'}">
+                    <p style="text-align: center; font-size: 18px; margin-bottom: 20px;">
+                        <strong>Paciente:</strong> ${patientData.name} | <strong>Peso:</strong> ${weight} kg
+                    </p>
+            `;
+            
+            if (type === 'hypotension') {
+                const fluidBolus = emergencyProtocols.fluidBolus || 10;
+                const fluidVolume = (fluidBolus * weight).toFixed(1);
+                
+                html += `
+                    <div class="protocol-medication" style="background: #e8f8f5; border-left-color: #1abc9c;">
+                        <strong>💧 PROVA DE CARGA (Cristaloide)</strong>
+                        <div>Dose: ${fluidBolus} ml/kg</div>
+                        <div>Via: IV (bolus rápido)</div>
+                        <div class="calculated-dose" style="color: #1abc9c;">
+                            → Administrar: ${fluidVolume} ml
+                        </div>
+                        <div style="margin-top: 5px; font-size: 12px; color: #555;">
+                            Ringer Lactato ou Solução Fisiológica 0.9%
+                        </div>
+                    </div>
+                `;
+            }
+            
+            emergencyProtocols[type].forEach(med => {
+                const calculatedDose = calculateDose(med, weight);
+                
+                html += `
+                    <div class="protocol-medication">
+                        <strong>${med.medication}</strong>
+                        <div>Dose: ${med.dose} ${med.unit}</div>
+                        <div>Via: ${med.via}</div>
+                        <div class="calculated-dose">
+                            → Administrar: ${calculatedDose}
+                        </div>
+                    </div>
+                `;
+            });
+            
+            html += '</div>';
+            
+            contentEl.innerHTML = html;
+            modal.style.display = 'block';
+        }
+
+        function calculateDose(med, weight) {
+            const dose = parseFloat(med.dose);
+            
+            if (isNaN(dose)) {
+                return 'Dose não configurada';
+            }
+            
+            let calculated;
+            let result;
+            
+            switch(med.unit) {
+                case 'mg/kg':
+                    calculated = dose * weight;
+                    result = `${calculated.toFixed(2)} mg`;
+                    break;
+                case 'mcg/kg':
+                    calculated = dose * weight;
+                    result = `${calculated.toFixed(2)} mcg`;
+                    break;
+                case 'ml/kg':
+                    calculated = dose * weight;
+                    result = `${calculated.toFixed(2)} ml`;
+                    break;
+                case 'mcg/kg/min':
+                    calculated = dose * weight;
+                    result = `${calculated.toFixed(2)} mcg/min`;
+                    break;
+                case 'mg total':
+                    result = `${dose.toFixed(2)} mg`;
+                    break;
+                case 'ml total':
+                    result = `${dose.toFixed(2)} ml`;
+                    break;
+                default:
+                    result = `${dose} ${med.unit}`;
+            }
+            
+            return result;
+        }
+
+        function closeEmergencyDisplay() {
+            document.getElementById('emergencyDisplayModal').style.display = 'none';
+        }
+
+        // ===== ENVIO POR WHATSAPP =====
+
+        function openWhatsAppSend() {
+            document.getElementById('whatsappModal').style.display = 'block';
+            document.getElementById('whatsappNumber').value = '';
+            document.getElementById('whatsappNumber').focus();
+        }
+
+        function closeWhatsAppModal() {
+            document.getElementById('whatsappModal').style.display = 'none';
+        }
+
+        function sendWhatsApp() {
+            const phone = document.getElementById('whatsappNumber').value.replace(/\D/g, '');
+            
+            if (!phone || phone.length < 10) {
+                alert('Por favor, digite um número válido com DDD (mínimo 10 dígitos)');
+                return;
+            }
+
+            // Capturar imagem do gráfico
+            const chartImage = canvas.toDataURL('image/png');
+            
+            // Gerar HTML completo da ficha com gráfico
+            const fichaHTML = generateFichaHTMLWithChart(chartImage);
+            
+            const blob = new Blob([fichaHTML], { type: 'text/html' });
+            
+            const url = URL.createObjectURL(blob);
+            
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Ficha_Anestesica_${patientData.name || 'Paciente'}_${new Date().toISOString().split('T')[0]}.html`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            
+            setTimeout(() => URL.revokeObjectURL(url), 100);
+            
+            const message = `Olá! Segue a Ficha Anestésica Veterinária do paciente *${patientData.name || 'Paciente'}*. O arquivo foi baixado e pode ser anexado manualmente no WhatsApp.`;
+            const encodedText = encodeURIComponent(message);
+            
+            const whatsappURL = `https://wa.me/55${phone}?text=${encodedText}`;
+            window.open(whatsappURL, '_blank');
+            
+            closeWhatsAppModal();
+            
+            alert('Arquivo HTML baixado! Anexe manualmente no WhatsApp.\n\nNota: O WhatsApp Web não permite anexar arquivos automaticamente por segurança.');
+        }
+
+        function generateFichaHTML() {
+            const hours = Math.floor(elapsedSeconds / 3600);
+            const minutes = Math.floor((elapsedSeconds % 3600) / 60);
+            const duration = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`;
+            
+            // Tempo cirúrgico
+            let surgeryDuration = 'Não iniciado';
+            if (isSurgeryActive || surgeryElapsedSeconds > 0) {
+                const surgHours = Math.floor(surgeryElapsedSeconds / 3600);
+                const surgMinutes = Math.floor((surgeryElapsedSeconds % 3600) / 60);
+                surgeryDuration = `${String(surgHours).padStart(2, '0')}:${String(surgMinutes).padStart(2, '0')}`;
+            }
+            
+            let html = `<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Anestésica - ${patientData.name || 'Paciente'}</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 20px auto; padding: 20px; background: #f5f5f5; }
+        .container { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; text-align: center; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #3498db; margin-top: 25px; border-bottom: 2px solid #ecf0f1; padding-bottom: 5px; }
+        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0; }
+        .info-item { padding: 10px; background: #f8f9fa; border-radius: 5px; }
+        .info-item strong { color: #2c3e50; display: block; margin-bottom: 5px; }
+        .medication { background: #e8f8f5; padding: 10px; margin: 10px 0; border-left: 4px solid #1abc9c; border-radius: 4px; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background: #3498db; color: white; }
+        .obs { background: #fff3cd; padding: 15px; border-left: 4px solid #ffc107; border-radius: 4px; margin: 15px 0; }
+        .footer { text-align: center; margin-top: 30px; padding-top: 20px; border-top: 2px solid #ecf0f1; color: #7f8c8d; font-size: 12px; }
+        .time-highlight { background: #e8f8f5; padding: 10px; border-left: 4px solid #f39c12; border-radius: 4px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FICHA ANESTÉSICA VETERINÁRIA</h1>
+        <p style="text-align: center; color: #e74c3c; font-weight: bold;">FICHA #${currentFicha}</p>
+        
+        <h2>IDENTIFICAÇÃO DO PACIENTE</h2>
+        <div class="info-grid">
+            <div class="info-item"><strong>Paciente:</strong> ${patientData.name || 'Não informado'}</div>
+            <div class="info-item"><strong>Tutor:</strong> ${patientData.tutor || 'Não informado'}</div>
+            <div class="info-item"><strong>Espécie:</strong> ${patientData.species || 'Não informado'}</div>
+            <div class="info-item"><strong>Raça:</strong> ${patientData.breed || 'Não informado'}</div>
+            <div class="info-item"><strong>Peso:</strong> ${patientData.weight || 'Não informado'} kg</div>
+            <div class="info-item"><strong>Idade:</strong> ${patientData.age || 'Não informado'}</div>
+            <div class="info-item"><strong>ASA:</strong> ${patientData.asaClass || 'Não informado'}</div>
+        </div>
+        
+        ${patientData.comorbidities ? `<div class="info-item"><strong>Comorbidades:</strong> ${patientData.comorbidities}</div>` : ''}
+        
+        <h2>PROCEDIMENTO</h2>
+        <div class="info-grid">
+            <div class="info-item"><strong>Cirurgia:</strong> ${patientData.surgery || 'Não informado'}</div>
+            <div class="info-item"><strong>Veterinário Responsável:</strong> ${patientData.vetResponsible || 'Não informado'}</div>
+            <div class="info-item"><strong>Cirurgião:</strong> ${patientData.surgeon || 'Não informado'}</div>
+            <div class="info-item"><strong>Anestesista:</strong> ${patientData.anesthetist || 'Não informado'}</div>
+        </div>
+        
+        <h2>TEMPOS</h2>
+        <div class="time-highlight">
+            <strong>⏱️ Tempo Anestésico Total:</strong> ${duration}
+        </div>
+        <div class="time-highlight" style="border-left-color: #f39c12;">
+            <strong>⚕️ Tempo Cirúrgico:</strong> ${surgeryDuration}
+        </div>
+`;
+
+            // MPA
+            const mpaData = getMedicationsFromList('mpa');
+            if (mpaData.length > 0) {
+                html += `<h2>MEDICAÇÃO PRÉ-ANESTÉSICA</h2>`;
+                mpaData.forEach(med => {
+                    html += `<div class="medication">
+                        <strong>${med.medication}</strong> - ${med.dose} (${med.via}) 
+                        ${med.time ? `às ${med.time}` : ''}
+                    </div>`;
+                });
+            }
+            
+            // Protocolo
+            const protocolData = getMedicationsFromList('protocol');
+            if (protocolData.length > 0) {
+                html += `<h2>PROTOCOLO ANESTÉSICO</h2>`;
+                protocolData.forEach(med => {
+                    html += `<div class="medication">
+                        <strong>${med.medication}</strong> - ${med.dose} (${med.via})
+                        ${med.time ? `às ${med.time}` : ''}
+                    </div>`;
+                });
+            }
+            
+            // Monitoramento
+            html += `<h2>MONITORAMENTO TRANSANESTÉSICO</h2>`;
+            html += `<table><thead><tr><th>Parâmetro</th><th>Mínimo</th><th>Máximo</th><th>Média</th></tr></thead><tbody>`;
+            
+            Object.keys(dataPoints).forEach(paramKey => {
+                const param = parameters[paramKey];
+                const points = dataPoints[paramKey];
+                
+                if (points.length > 0 && param.numeric && !param.isEvent) {
+                    const values = points.map(p => p.value);
+                    const min = Math.min(...values);
+                    const max = Math.max(...values);
+                    const avg = (values.reduce((a, b) => a + b, 0) / values.length).toFixed(1);
+                    
+                    html += `<tr>
+                        <td>${param.name}</td>
+                        <td>${min} ${param.unit}</td>
+                        <td>${max} ${param.unit}</td>
+                        <td>${avg} ${param.unit}</td>
+                    </tr>`;
+                }
+            });
+            
+            html += `</tbody></table>`;
+            
+            // Eventos
+            const hasHypotension = dataPoints.hypotension_event && dataPoints.hypotension_event.length > 0;
+            const hasEmergency = dataPoints.emergency_event && dataPoints.emergency_event.length > 0;
+            
+            if (hasHypotension || hasEmergency) {
+                html += `<h2>EVENTOS REGISTRADOS</h2>`;
+                if (hasHypotension) {
+                    html += `<div class="medication" style="background: #fff3cd; border-left-color: #f39c12;">
+                        <strong>🩸 Hipotensão</strong> - ${dataPoints.hypotension_event.length} ocorrência(s)
+                    </div>`;
+                }
+                if (hasEmergency) {
+                    html += `<div class="medication" style="background: #f8d7da; border-left-color: #e74c3c;">
+                        <strong>🚨 Emergência</strong> - ${dataPoints.emergency_event.length} ocorrência(s)
+                    </div>`;
+                }
+            }
+            
+            // Observações
+            const obs = document.getElementById('observations').value;
+            if (obs) {
+                html += `<h2>OBSERVAÇÕES E INTERCORRÊNCIAS</h2>`;
+                html += `<div class="obs">${obs.replace(/\n/g, '<br>')}</div>`;
+            }
+            
+            html += `
+        <div class="footer">
+            Relatório gerado em ${new Date().toLocaleString('pt-BR')}<br>
+            Sistema: Ficha Anestésica Veterinária
+        </div>
+    </div>
+</body>
+</html>`;
+            
+            return html;
+        }
+
+        function getMedicationsFromList(listId) {
+            const list = document.getElementById(listId + 'List');
+            const entries = list.querySelectorAll('.medication-entry');
+            const meds = [];
+            
+            entries.forEach(entry => {
+                const inputs = entry.querySelectorAll('input, select');
+                const med = {
+                    medication: inputs[0]?.value || '',
+                    dose: inputs[1]?.value || '',
+                    via: inputs[2]?.value || '',
+                    time: inputs[3]?.value || ''
+                };
+                
+                if (med.medication) {
+                    meds.push(med);
+                }
+            });
+            
+            return meds;
+        }
+
+        // PWA INSTALLATION - Manifest inline
+        const manifestData = {
+            name: "Ficha Anestésica Veterinária",
+            short_name: "Ficha Anestésica",
+            description: "Sistema completo de monitoramento anestésico veterinário",
+            start_url: window.location.pathname,
+            display: "standalone",
+            background_color: "#2c3e50",
+            theme_color: "#3498db",
+            orientation: "landscape",
+            icons: [
+                {
+                    src: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMzQ5OGRiIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMjk4MGI5Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjE5MiIgaGVpZ2h0PSIxOTIiIGZpbGw9InVybCgjYmcpIi8+PHBhdGggZD0iTSAxOS4yIDk2IEwgNDggOTYgTCA2Ny4yIDY0IEwgODYuNCAxMjggTCAxMDUuNiA4MCBMIDEyNC44IDk2IEwgMTcyLjggOTYiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iOS42IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGZpbGw9Im5vbmUiLz48cmVjdCB4PSIxMzgiIHk9IjM2IiB3aWR0aD0iMTIiIGhlaWdodD0iMjQiIGZpbGw9IndoaXRlIi8+PHJlY3QgeD0iMTMyIiB5PSI0MiIgd2lkdGg9IjI0IiBoZWlnaHQ9IjEyIiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==",
+                    sizes: "192x192",
+                    type: "image/svg+xml",
+                    purpose: "any maskable"
+                },
+                {
+                    src: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMzQ5OGRiIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMjk4MGI5Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIGZpbGw9InVybCgjYmcpIi8+PHBhdGggZD0iTSA1MS4yIDI1NiBMIDEyOCAyNTYgTCAxNzkuMiAxNzAuNjcgTCAyMzAuNCAzNDEuMzMgTCAyODEuNiAyMTMuMzMgTCAzMzIuOCAyNTYgTCA0NjAuOCAyNTYiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMjUuNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBmaWxsPSJub25lIi8+PHJlY3QgeD0iMzY4IiB5PSI5NiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjY0IiBmaWxsPSJ3aGl0ZSIvPjxyZWN0IHg9IjM1MiIgeT0iMTEyIiB3aWR0aD0iNjQiIGhlaWdodD0iMzIiIGZpbGw9IndoaXRlIi8+PC9zdmc+",
+                    sizes: "512x512",
+                    type: "image/svg+xml",
+                    purpose: "any maskable"
+                }
+            ]
+        };
+
+        // Criar e injetar manifest
+        const manifestBlob = new Blob([JSON.stringify(manifestData)], { type: 'application/json' });
+        const manifestURL = URL.createObjectURL(manifestBlob);
+        const linkManifest = document.createElement('link');
+        linkManifest.rel = 'manifest';
+        linkManifest.href = manifestURL;
+        document.head.appendChild(linkManifest);
+        
+        let deferredPrompt;
+        
+        window.addEventListener('beforeinstallprompt', (e) => {
+            // Prevenir prompt automático do navegador
+            e.preventDefault();
+            
+            // Guardar evento para usar depois
+            deferredPrompt = e;
+            
+            // Mostrar nosso prompt personalizado
+            setTimeout(() => {
+                document.getElementById('pwaInstallPrompt').classList.add('show');
+            }, 3000); // Esperar 3 segundos após carregar
+        });
+
+        function installPWA() {
+            if (!deferredPrompt) {
+                alert('Instalação não disponível neste momento.');
+                return;
+            }
+            
+            // Mostrar prompt de instalação
+            deferredPrompt.prompt();
+            
+            // Aguardar escolha do usuário
+            deferredPrompt.userChoice.then((choiceResult) => {
+                if (choiceResult.outcome === 'accepted') {
+                    console.log('PWA instalado');
+                }
+                deferredPrompt = null;
+                dismissPWAPrompt();
+            });
+        }
+
+        function dismissPWAPrompt() {
+            document.getElementById('pwaInstallPrompt').classList.remove('show');
+        }
+
+        // Service Worker inline
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                const swCode = `
+                    const CACHE_NAME = 'ficha-anestesica-v1';
+                    self.addEventListener('install', e => {
+                        e.waitUntil(caches.open(CACHE_NAME));
+                        self.skipWaiting();
+                    });
+                    self.addEventListener('activate', e => {
+                        e.waitUntil(
+                            caches.keys().then(keys => 
+                                Promise.all(keys.map(k => k !== CACHE_NAME && caches.delete(k)))
+                            )
+                        );
+                        self.clients.claim();
+                    });
+                    self.addEventListener('fetch', e => {
+                        e.respondWith(
+                            caches.match(e.request).then(r => r || fetch(e.request).then(response => {
+                                return caches.open(CACHE_NAME).then(cache => {
+                                    cache.put(e.request, response.clone());
+                                    return response;
+                                });
+                            }))
+                        );
+                    });
+                `;
+                
+                const blob = new Blob([swCode], { type: 'application/javascript' });
+                const swURL = URL.createObjectURL(blob);
+                
+                navigator.serviceWorker.register(swURL)
+                    .then(reg => console.log('Service Worker registrado'))
+                    .catch(err => console.log('Erro no Service Worker:', err));
+            });
+        }
+    </script>
+</body>
+</html>
